@@ -7,200 +7,106 @@
 </head>
 
 <body class="page__body">
-  <body class="page__body">
   <!--Header-->
-    <header class="main-header">
-      <a class="main-header__logo logo">
-        <img class="" width="" height="" src="" alt="Sity of sedona.">
+  <header class="header">
+    <a class="logo">
+      <img class="" width="" height="" src="" alt="Sity of sedona.">
+    </a>
+    <nav class="nav">
+      <button class="nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item nav__item--active">
+          <a href="#">Главная</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Фото и видео</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Форма отзыва</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Html Academy</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="intro">
+      <h2 class="visually-hidden">Sedona</h2>
+      <img class="intro__welcome-text" width="" height="" src="#" alt="SEDONA.">
+    </section>
+  </header>
+  <main class="main">
+    <div class="main__wrapper">
+      <h1 class="visually-hidden">
+        Фотогралерея города Sedona
+      </h1>
+      <section class="fotogallery">
+        <div class="fotogallery__text">
+          <h2 class="fotogallery__title">Фото и видео</h2>
+          <p class="fotogallery__discription">
+            Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+          </p>
+        </div>
+        <figure class="card">
+          <img class="card__image" src="#" alt="Шоссе в горизонт.">
+          <h3 class="card__title">Неродные просторы</h3>
+          <p class="card__discription">Автор фото: Борис</p>
+          <a class="card__button-like" href="#">Like</a>
+          <b class="card__meter">1350</b>
+        </figure>
+        <figure class="card__title">
+          <img class="card__image" src="#" alt="Местная растительность.">
+          <h3 class="card__item">Местная растительность</h3>
+          <p class="card__discription">Автор фото: Сергей</p>
+          <a class="card__button-like" href="#">Like</a>
+          <b class="card__meter">143</b>
+        </figure>
+        <figure class="card">
+          <img class="card__image" src="#" alt="Дорога в горах.">
+          <h3 class="card__title">Дорога на север</h3>
+          <p class="card__discription">Автор фото: Петр</p>
+          <a class="card__button-like" href="#">Like</a>
+          <b class="card__meter">96</b>
+        </figure>
+        <figure class="card">
+          <img class="card__image" src="#" alt="Мост Дьявола.">
+          <h3 class="card__title">Мост дьявола</h3>
+          <p class="card__discription">Автор фото: Антон</p>
+          <a class="card__button-like" href="#">Like</a>
+          <b class="card__meter">254</b>
+        </figure>
+      </section>
+      <section class="video">
+        <div class="video__wrapper">
+          <h2 class="video_title">Все еще сомневаетесь?</h2>
+          <p class="video_discription">
+            Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+          </p>
+          <video width="" height="" controls="controls" poster=".jpg">
+            <source src=".ogv" type='video/ogg; codecs="theora, vorbis"'>
+            <source src=".mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            <source src=".webm" type='video/webm; codecs="vp8, vorbis"'>
+          </video>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <a class="VISITSEDONA" href="#">#VISITSEDONA</a>
+    <div class="social">
+      <a class="social__link social__link--vkontacte" href="#">
+        <a class="social__link social__link--telegram" href="#">
+          <a class="social__link social__link--youtube" href="#">
+    </div>
+    <div class="copyright">
+      <p class="copyright__discription">Разработано</p>
+      <a class="copyright__link" href="#">
+        <img class="copyright__image" src="#" alt="Лого htmlacademy">
       </a>
-      <nav class="main_nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">
-            Открыть меню
-          </span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="#">
-                Главная
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">
-                Фото и видео
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">
-                Форма отзыва
-              </a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">
-                Html Academy
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main class="main-container">
-      <div class="main-container__wrapper">
-        <h1 class="visually-hidden">
-          Фотогралерея города Sedona
-        </h1>
-        <!--Подумать как сделать svg текст-->
-        <section class="intro">
-          <div class="intro__wrapper">
-            <h2 class="visually-hidden">
-              Sedona
-            </h2>
-            <div class="intro__background">
-              <img class="intro__mountains" width="" height="" src="#" alt="Горы.">
-              <img class="intro__welcome-text" width="" height="" src="#" alt="SEDONA.">
-            </div>
-          </div>
-        </section>
-        <section class="main-catalog">
-          <div class="main-catalog__wrapper">
-            <div class="main-catalog__text">
-              <h2 class="main-catalog__title">
-                ФОТО И ВИДЕО
-              </h2>
-              <p class="main-catalog__discription">
-                Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
-              </p>
-            </div>
-            <ul class="main-catalog__list">
-              <li class="main-catalog__item">
-                <img class="main-catalog__image" src="#" alt="Шоссе в горизонт.">
-                <div class="main-catalog__text-container">
-                  <h3 class="main-catalog__item">
-                    неродные просторы
-                  </h3>
-                  <p class="main-catalog__discription">
-                    Автор фото: Борис
-                  </p>
-                </div>
-                <div class="main-catalog__like-container">
-                  <button class="main-catalog__button-like"></button>
-                  <b class="main-catalog__meter">
-                    1350
-                  </b>
-                </div>
-              </li>
-              <li class="main-catalog__item">
-                <img class="main-catalog__image" src="#" alt="Местная растительность.">
-                <div class="main-catalog__text-container">
-                  <h3 class="main-catalog__item">
-                    Местная растительность
-                  </h3>
-                  <p class="main-catalog__discription">
-                    Автор фото: Сергей
-                  </p>
-                </div>
-                <div class="main-catalog__like-container">
-                  <button class="main-catalog__button-like"></button>
-                  <b class="main-catalog__meter">
-                    143
-                  </b>
-                </div>
-              </li>
-              <li class="main-catalog__item">
-                <img class="main-catalog__image" src="#" alt="Дорога в горах.">
-                <div class="main-catalog__text-container">
-                  <h3 class="main-catalog__item">
-                    Дорога на север
-                  </h3>
-                  <p class="main-catalog__discription">
-                    Автор фото: Петр
-                  </p>
-                </div>
-                <div class="main-catalog__like-container">
-                  <button class="main-catalog__button-like"></button>
-                  <b class="main-catalog__meter">
-                    96
-                  </b>
-                </div>
-              </li>
-              <li class="main-catalog__item">
-                <img class="main-catalog__image" src="#" alt="Мост Дьявола.">
-                <div class="main-catalog__text-container">
-                  <h3 class="main-catalog__item">
-                    Мост дьявола
-                  </h3>
-                  <p class="main-catalog__discription">
-                    Автор фото: Антон
-                  </p>
-                </div>
-                <div class="main-catalog__like-container">
-                  <button class="main-catalog__button-like"></button>
-                  <b class="main-catalog__meter">
-                    254
-                  </b>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="main-video">
-          <div class="main-video__wrapper">
-            <h2 class="main-video_title">
-              Все еще сомневаетесь?
-            </h2>
-            <p class="main-video_discription">
-              Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
-            </p>
-            <video width="" height="" controls="controls" poster=".jpg">
-              <source src=".ogv" type='video/ogg; codecs="theora, vorbis"'>
-              <source src=".mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-              <source src=".webm" type='video/webm; codecs="vp8, vorbis"'>
-            </video>
-          </div>
-        </section>
-      </div>
-    </main>
-    <footer class="main-footer">
-      <div class="main-footer__wrapper">
-        <a class="VISITSEDONA" href="#">
-          #VISITSEDONA
-        </a>
-        <div class="main-footer__sotials sotials">
-          <ul class="socials-list">
-            <li class="socials_item">
-              <a class="sotials__link sotials__link--vkontacte" href="#">
-                <img class="sotials__image" width="" height="" src="#" alt="Вконтакте.">
-                <span class="visually-hidden">
-                  Вконтакте
-                </span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="sotials__link sotials__link--telegram" href="#">
-                <img class="sotials__image" width="" height="" src="#" alt="Телеграм.">
-                <span class="visually-hidden">
-                  Телеграм
-                </span>
-              </a>
-            </li>
-            <li class="socials_item">
-              <a class="sotials__link sotials__link--youtube" href="#">
-                <img class="sotials__image" width="" height="" src="#" alt="Youtube.">
-                <span class="visually-hidden">
-                  Youtube
-                </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="main-footer_copyright copyright">
-          <p class="copyright__text">РАЗРАБОТАНО</p>
-          <a class="copyright_link" href="#">
-          </a>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
 </body>
+
 </html>
