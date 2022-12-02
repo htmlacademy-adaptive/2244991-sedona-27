@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+
+<body class="page__body">
+  <!--Header-->
+  <header class="header">
+    <a class="logo">
+      <img class="logo-sedona" width="185" height="96" src="../images/logo-sedona.png" alt="Sity of sedona.">
+    </a>
+    <nav class="nav">
+      <button class="nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item nav__item--active">
+          <a href="#">Главная</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Фото и видео</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Форма отзыва</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Html Academy</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="intro">
+      <h2 class="visually-hidden">Sedona</h2>
+      <img class="intro__welcome-text" width="901" height="389" src="../images/welcome.svg" alt="welcome-to-sedona.">
+    </section>
+  </header>
+  <main class="main">
+    <div class="main__wrapper">
+      <h1 class="visually-hidden">
+        Фотогралерея города Sedona
+      </h1>
+      <section class="fotogallery">
+        <div class="fotogallery__text">
+          <h2 class="fotogallery__title">Фото и видео</h2>
+          <p class="fotogallery__discription">
+            Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+          </p>
+        </div>
+        <figure class="card">
+          <img class="card__image" width="280" height="280" src="../images/road.jpg" alt="Шоссе в горизонт.">
+          <h3 class="card__title">Неродные просторы</h3>
+          <p class="card__discription">Автор фото: Борис</p>
+          <a class="card__button-like" href="#">Like</a>
+          <b class="card__meter">1350</b>
+        </figure>
+        <figure class="card">
+          <img class="card__image" width="280" height="280" src="../images/flora.jpg" alt="Местная растительность.">
+          <h3 class="card__title">Местная растительность</h3>
+          <p class="card__discription">Автор фото: Сергей</p>
+          <a class="card__button-like" href="#">Like</a>
+          <b class="card__meter">143</b>
+        </figure>
+        <figure class="card">
+          <img class="card__image" width="280" height="280" src="../images/mountains.jpg" alt="Дорога в горах.">
+          <h3 class="card__title">Дорога на север</h3>
+          <p class="card__discription">Автор фото: Петр</p>
+          <a class="card__button-like" href="#">Like</a>
+          <b class="card__meter">96</b>
+        </figure>
+        <figure class="card">
+          <img class="card__image" width="280" height="280" src="../images/bridge.jpg" alt="Мост Дьявола.">
+          <h3 class="card__title">Мост дьявола</h3>
+          <p class="card__discription">Автор фото: Антон</p>
+          <a class="card__button-like" href="#">Like</a>
+          <b class="card__meter">254</b>
+        </figure>
+      </section>
+      <section class="video">
+        <div class="video__wrapper">
+          <h2 class="video__title">Все еще сомневаетесь?</h2>
+          <p class="video__discription">
+            Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+          </p>
+          <video width="280" height="177" controls="controls" poster="../images/video.jpg">
+            <source src=".ogv" type='video/ogg; codecs="theora, vorbis"'>
+            <source src=".mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            <source src=".webm" type='video/webm; codecs="vp8, vorbis"'>
+          </video>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <a class="VISITSEDONA" href="#">#VISITSEDONA</a>
+    <div class="social">
+      <a class="social__link social__link--vkontacte" href="#">vkontakte</a>
+      <a class="social__link social__link--telegram" href="#">telegram</a>
+      <a class="social__link social__link--youtube" href="#">youtube</a>
+    </div>
+    <div class="copyright">
+      <p class="copyright__discription">Разработано</p>
+      <a class="copyright__link" href="#">
+        <img class="copyright__image" width="27" height="34" src="../images/logo-htmlacademy.svg" alt="Лого htmlacademy.">
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

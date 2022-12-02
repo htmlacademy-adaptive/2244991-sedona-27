@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+
+<body class="page__body">
+  <!--Header-->
+  <header class="header">
+    <a class="logo">
+      <img class="logo-sedona" width="185" height="96" src="../images/logo-sedona.png" alt="Sity of sedona.">
+    </a>
+    <nav class="nav">
+      <button class="nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="nav__list">
+        <li class="nav__item nav__item--active">
+          <a href="#">Главная</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Фото и видео</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Форма отзыва</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Html Academy</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="intro">
+      <h2 class="visually-hidden">Sedona</h2>
+      <img class="intro__welcome-text" width="901" height="389" src="../images/welcome.svg" alt="welcome-to-sedona.">
+    </section>
+  </header>
+  <main class="main">
+    <h1 class="visually-hidden">
+      Фотогралерея города Sedona
+    </h1>
+    <section class="review">
+      <h2 class="main__title">Оставьте свой отзыв</h2>
+      <p class="main__discription">
+        Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+      </p>
+    </section>
+    <section class="feedback">
+      <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="form__box">
+          <h2 class="main__title">Представьтесь:</h2>
+          <label class="form__subtitle" for="form__first-name">
+            Имя*:
+          </label>
+          <input type="text" id="form__first-name" name="first-name" placeholder="Пётр">
+          <label class="form__subtitle" for="form__second-name">
+            Фамилия*:
+          </label>
+          <input type="text" id="form__second-name" name="second-name" placeholder="Пустота">
+          <label class="form__subtitle" for="form__patronymic">
+            Отчество:
+          </label>
+          <input type="text" id="form__patronymic" name="patronymic" placeholder="Викторович">
+        </fieldset>
+        <fieldset class="form__box">
+          <h2 class="main__title">Контактная информация:</h2>
+          <label class="form__subtitle form__subtitle--phone" for="form__phone">
+            Контактный телефон*:
+          </label>
+          <input type="text" id="form__phone" name="phone" placeholder="Введите телефон">
+          <label class="form__subtitle form__subtitle--email" for="form__email">
+            Элекронная почта*:</label>
+          <input type="email" id="form__email" name="email" placeholder="Введите email">
+        </fieldset>
+        <fieldset class="form__feeling">
+          <legend class="main__title">
+            Ваше общее впечатление:
+          </legend>
+          <input class="radio" id="positive" type="radio" name="feeling" value="positive">
+          <label class="control" for="positive">
+            Скорее положительное
+          </label>
+          <input class="radio" id="negative" type="radio" name="feeling" value="negative">
+          <label class="control" for="negative">
+            Скорее отрицательное
+          </label>
+          <input class="radio" id="no-answer" type="radio" name="feeling" value="no-answer">
+          <label class="control" for="no-answer">
+            Затрудняюсь ответить
+          </label>
+        </fieldset>
+        <fieldset class="form__places">
+          <legend class="form__title">Посещенные достопримечательности:</legend>
+          <input class="chekbox" id="devil-bridge" type="checkbox" name="devil-bridge">
+          <label class="control" for="devil-bridge">
+            Мост Дьявола
+          </label>
+          <input class="chekbox" id="mountain-bell" type="checkbox" name="mountain-bell">
+          <label class="control" for="mountain-bell">
+            Гора-Колокол
+          </label>
+          <input class="chekbox" id="slide-park" type="checkbox" name="slide-park">
+          <label class="control" for="slide-park">
+            Слайд-парк
+          </label>
+          <input class="chekbox" id="red-rocks" type="checkbox" name="red-rocks">
+          <label class="control" for="red-rocks">
+            Красные скалы
+          </label>
+        </fieldset>
+        <label class="form__emotions" for="emotions">Опишите свои эмоции:</label>
+        <textarea id="emotions" name="emotions" placeholder="Опишите подробнее все свои восторги"></textarea>
+        <button class="form__button" type="submit">Отправить отзыв</button>
+        <p class="form__legend">
+          <small>* — обязательные поля</small>
+        </p>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <a class="VISITSEDONA" href="#">#VISITSEDONA</a>
+    <div class="social">
+      <a class="social__link social__link--vkontacte" href="#">vkontakte</a>
+      <a class="social__link social__link--telegram" href="#">telegram</a>
+      <a class="social__link social__link--youtube" href="#">youtube</a>
+    </div>
+    <div class="copyright">
+      <p class="copyright__discription">Разработано</p>
+      <a class="copyright__link" href="#">
+        <img class="copyright__image" width="27" height="34" src="../images/logo-htmlacademy.svg"
+          alt="Лого htmlacademy.">
+      </a>
+    </div>
+  </footer>
+
+  <div class="modal modal-error modal-error--hide">
+    <h2 class="modal__title">Что-то пошло не так!</h2>
+    <p class="modal__discription">
+      Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+    </p>
+    <button class="close" type="button">ок</button>
+  </div>
+
+  <div class="modal modal-sent modal-sent--hide">
+    <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+    <p class="modal__discription">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем
+      его на сайте.</p>
+    <button class="close close--background" type="button">Закрыть окно</button>
+  </div>
+
+
+</body>
+
+</html>
