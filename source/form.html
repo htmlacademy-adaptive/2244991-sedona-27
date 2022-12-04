@@ -10,7 +10,7 @@
   <!--Header-->
   <header class="header">
     <a class="logo">
-      <img class="logo-sedona" width="185" height="96" src="../images/logo-sedona.png" alt="Sity of sedona.">
+      <img class="logo-sedona" width="185" height="96" src="../source/images/logo-sedona.png" alt="Sity of sedona.">
     </a>
     <nav class="nav">
       <button class="nav__toggle" type="button">
@@ -33,7 +33,7 @@
     </nav>
     <section class="intro">
       <h2 class="visually-hidden">Sedona</h2>
-      <img class="intro__welcome-text" width="901" height="389" src="../images/welcome.svg" alt="welcome-to-sedona.">
+      <img class="intro__welcome-text" width="901" height="389" src="../source/images/welcome.svg" alt="welcome-to-sedona.">
     </section>
   </header>
   <main class="main">
@@ -50,28 +50,28 @@
       <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="form__box">
           <h2 class="main__title">Представьтесь:</h2>
-          <label class="form__subtitle" for="form__first-name">
+          <label class="form__subtitle" for="first-name">
             Имя*:
           </label>
-          <input type="text" id="form__first-name" name="first-name" placeholder="Пётр">
-          <label class="form__subtitle" for="form__second-name">
+          <input class="form__first-name" type="text" id="first-name" name="first-name" placeholder="Пётр">
+          <label class="form__subtitle" for="second-name">
             Фамилия*:
           </label>
-          <input type="text" id="form__second-name" name="second-name" placeholder="Пустота">
-          <label class="form__subtitle" for="form__patronymic">
+          <input type="text" id="second-name" name="second-name" placeholder="Пустота">
+          <label class="form__subtitle" for="patronymic">
             Отчество:
           </label>
-          <input type="text" id="form__patronymic" name="patronymic" placeholder="Викторович">
+          <input type="text" id="patronymic" name="patronymic" placeholder="Викторович">
         </fieldset>
         <fieldset class="form__box">
           <h2 class="main__title">Контактная информация:</h2>
-          <label class="form__subtitle form__subtitle--phone" for="form__phone">
+          <label class="form__subtitle form__subtitle--phone" for="phone">
             Контактный телефон*:
           </label>
-          <input type="text" id="form__phone" name="phone" placeholder="Введите телефон">
-          <label class="form__subtitle form__subtitle--email" for="form__email">
+          <input type="text" id="phone" name="phone" placeholder="Введите телефон">
+          <label class="form__subtitle form__subtitle--email" for="email">
             Элекронная почта*:</label>
-          <input type="email" id="form__email" name="email" placeholder="Введите email">
+          <input type="email" id="email" name="email" placeholder="Введите email">
         </fieldset>
         <fieldset class="form__feeling">
           <legend class="main__title">
@@ -92,20 +92,20 @@
         </fieldset>
         <fieldset class="form__places">
           <legend class="form__title">Посещенные достопримечательности:</legend>
-          <input class="chekbox" id="devil-bridge" type="checkbox" name="devil-bridge">
-          <label class="control" for="devil-bridge">
+          <input class="chekbox" id="devil_bridge" type="checkbox" name="devil-bridge">
+          <label class="control" for="devil_bridge">
             Мост Дьявола
           </label>
-          <input class="chekbox" id="mountain-bell" type="checkbox" name="mountain-bell">
-          <label class="control" for="mountain-bell">
+          <input class="chekbox" id="mountain_bell" type="checkbox" name="mountain-bell">
+          <label class="control" for="mountain_bell">
             Гора-Колокол
           </label>
-          <input class="chekbox" id="slide-park" type="checkbox" name="slide-park">
-          <label class="control" for="slide-park">
+          <input class="chekbox" id="slide_park" type="checkbox" name="slide-park">
+          <label class="control" for="slide_park">
             Слайд-парк
           </label>
-          <input class="chekbox" id="red-rocks" type="checkbox" name="red-rocks">
-          <label class="control" for="red-rocks">
+          <input class="chekbox" id="red_rocks" type="checkbox" name="red-rocks">
+          <label class="control" for="red_rocks">
             Красные скалы
           </label>
         </fieldset>
@@ -119,7 +119,7 @@
     </section>
   </main>
   <footer class="footer">
-    <a class="VISITSEDONA" href="#">#VISITSEDONA</a>
+    <a class="visitsedona" href="#">#VISITSEDONA</a>
     <div class="social">
       <a class="social__link social__link--vkontacte" href="#">vkontakte</a>
       <a class="social__link social__link--telegram" href="#">telegram</a>
@@ -127,14 +127,14 @@
     </div>
     <div class="copyright">
       <p class="copyright__discription">Разработано</p>
-      <a class="copyright__link" href="#">
-        <img class="copyright__image" width="27" height="34" src="../images/logo-htmlacademy.svg"
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="copyright__image" width="27" height="34" src="../source/images/logo-htmlacademy.svg"
           alt="Лого htmlacademy.">
       </a>
     </div>
   </footer>
 
-  <div class="modal modal-error modal-error--hide">
+  <div class="modal modal--hide">
     <h2 class="modal__title">Что-то пошло не так!</h2>
     <p class="modal__discription">
       Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
@@ -142,7 +142,7 @@
     <button class="close" type="button">ок</button>
   </div>
 
-  <div class="modal modal-sent modal-sent--hide">
+  <div class="modal modal--hide">
     <h2 class="modal__title">Ваш отзыв отправлен!</h2>
     <p class="modal__discription">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем
       его на сайте.</p>
