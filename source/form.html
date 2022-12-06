@@ -54,67 +54,67 @@
           <label class="form__subtitle" for="first-name">
             Имя*:
           </label>
-          <input class="form__first-name" type="text" id="first-name" name="first-name" placeholder="Пётр">
+          <input class="form__input" type="text" id="first-name" name="first-name" placeholder="Пётр">
           <label class="form__subtitle" for="second-name">
             Фамилия*:
           </label>
-          <input type="text" id="second-name" name="second-name" placeholder="Пустота">
+          <input class="form__input" type="text" id="second-name" name="second-name" placeholder="Пустота">
           <label class="form__subtitle" for="patronymic">
             Отчество:
           </label>
-          <input type="text" id="patronymic" name="patronymic" placeholder="Викторович">
+          <input class="form__input" type="text" id="patronymic" name="patronymic" placeholder="Викторович">
         </fieldset>
         <fieldset class="form__box">
           <h2 class="main__title">Контактная информация:</h2>
           <label class="form__subtitle form__subtitle--phone" for="phone">
             Контактный телефон*:
           </label>
-          <input type="text" id="phone" name="phone" placeholder="Введите телефон">
+          <input class="form__input" type="text" id="phone" name="phone" placeholder="Введите телефон">
           <label class="form__subtitle form__subtitle--email" for="email">
             Элекронная почта*:</label>
-          <input type="email" id="email" name="email" placeholder="Введите email">
+          <input class="form__input" type="email" id="email" name="email" placeholder="Введите email">
         </fieldset>
         <fieldset class="form__feeling">
-          <legend class="main__title">
+          <h2 class="main__title">
             Ваше общее впечатление:
-          </legend>
-          <input class="radio" id="positive" type="radio" name="feeling" value="positive">
-          <label class="control" for="positive">
+          </h2>
+          <input class="form__radio" id="positive" type="radio" name="feeling" value="positive">
+          <label class="form__control" for="positive">
             Скорее положительное
           </label>
-          <input class="radio" id="negative" type="radio" name="feeling" value="negative">
-          <label class="control" for="negative">
+          <input class="form__radio" id="negative" type="radio" name="feeling" value="negative">
+          <label class="form__control" for="negative">
             Скорее отрицательное
           </label>
-          <input class="radio" id="no-answer" type="radio" name="feeling" value="no-answer">
-          <label class="control" for="no-answer">
+          <input class="form__radio" id="no-answer" type="radio" name="feeling" value="no-answer">
+          <label class="form__control" for="no-answer">
             Затрудняюсь ответить
           </label>
         </fieldset>
         <fieldset class="form__places">
-          <legend class="form__title">Посещенные достопримечательности:</legend>
-          <input class="chekbox" id="devil_bridge" type="checkbox" name="devil-bridge">
-          <label class="control" for="devil_bridge">
+          <h2 class="main__title">Посещенные достопримечательности:</h2>
+          <input class="form__chekbox" id="devil_bridge" type="checkbox" name="devil-bridge">
+          <label class="form__control" for="devil_bridge">
             Мост Дьявола
           </label>
-          <input class="chekbox" id="mountain_bell" type="checkbox" name="mountain-bell">
-          <label class="control" for="mountain_bell">
+          <input class="form__chekbox" id="mountain_bell" type="checkbox" name="mountain-bell">
+          <label class="form__control" for="mountain_bell">
             Гора-Колокол
           </label>
-          <input class="chekbox" id="slide_park" type="checkbox" name="slide-park">
-          <label class="control" for="slide_park">
+          <input class="form__chekbox" id="slide_park" type="checkbox" name="slide-park">
+          <label class="form__control" for="slide_park">
             Слайд-парк
           </label>
-          <input class="chekbox" id="red_rocks" type="checkbox" name="red-rocks">
-          <label class="control" for="red_rocks">
+          <input class="form__chekbox" id="red_rocks" type="checkbox" name="red-rocks">
+          <label class="form__control" for="red_rocks">
             Красные скалы
           </label>
         </fieldset>
         <label class="form__emotions" for="emotions">Опишите свои эмоции:</label>
-        <textarea id="emotions" name="emotions" placeholder="Опишите подробнее все свои восторги"></textarea>
+        <textarea class="form__textarea" id="emotions" name="emotions" placeholder="Опишите подробнее все свои восторги"></textarea>
         <button class="form__button" type="submit">Отправить отзыв</button>
         <p class="form__legend">
-          <small>* — обязательные поля</small>
+          <small class="form__comment">* — обязательные поля</small>
         </p>
       </form>
     </section>
@@ -140,14 +140,14 @@
     <p class="modal__discription">
       Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
     </p>
-    <button class="close" type="button">ок</button>
+    <button class="modal__button" type="button">ок</button>
   </div>
 
-  <div class="modal modal--hide">
+  <div class="modal modal--sent modal--hide">
     <h2 class="modal__title">Ваш отзыв отправлен!</h2>
     <p class="modal__discription">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем
       его на сайте.</p>
-    <button class="close close--background" type="button">Закрыть окно</button>
+    <button class="modal__button modal__button--background" type="button">Закрыть окно</button>
   </div>
 
 
