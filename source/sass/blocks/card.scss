@@ -1,0 +1,31 @@
+.card {
+  margin-block-start: 24px;
+  margin-block-end: 25px;
+  margin-inline-end: 20px;
+  margin-inline-start: 20px;
+}
+
+.card__image {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.card__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.card__discription {
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.card__button-like {
+  padding-right: 14px;
+}
+
+.card__meter {
+
+}
