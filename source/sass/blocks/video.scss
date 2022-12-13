@@ -1,5 +1,24 @@
+@use "./variables.scss";
+
 .video {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
   padding: 17px 20px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 58px 60px 0;
+  }
+}
+
+.video__text {
+  margin-bottom: 38px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 445px;
+    margin-bottom: 66px;пше
+  }
 }
 
 .video__title {
@@ -9,6 +28,10 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .video__discription {
@@ -17,5 +40,11 @@
   font-weight: 400;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 38px;
+}
+
+
+.video__presentation {
+  @media (min-width: variables.$tablet-width) {
+    width: 648px;
+  }
 }

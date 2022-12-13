@@ -1,6 +1,4 @@
-.advantages {
-
-}
+@use "./variables.scss";
 
 .advantages__list {
   list-style: none;
@@ -17,6 +15,10 @@
 .advantages__item {
   color: #eeeeee;
   background-color: #81b3d2;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+  }
 }
 
 .advantages__item--not-active {
@@ -29,6 +31,12 @@
   margin: 0;
   padding-bottom: 16px;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+  }
 }
 
 .advantages__number {
@@ -40,8 +48,4 @@
 .advantages__discription {
   margin: 0;
   text-transform: uppercase;
-}
-
-.advantages__image {
-  width: 100%;
 }

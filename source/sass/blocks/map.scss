@@ -1,0 +1,9 @@
+@use "./variables.scss";
+
+.map {
+  height: 350px;
+  background-image: url("../img/map-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}

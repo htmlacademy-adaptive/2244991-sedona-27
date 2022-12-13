@@ -1,5 +1,8 @@
-.form {
+@use "./variables.scss";
 
+@mixin form-margin-padding {
+  margin: 0;
+  padding: 0;
 }
 
 .form__subtitle {
@@ -10,24 +13,24 @@
 .form__box {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
   border: none;
   margin-bottom: 49px;
+
+  @include form-margin-padding;
 }
 
 .form__feeling {
-  margin: 0;
-  padding: 0;
   border: none;
   margin-bottom: 49px;
+
+  @include form-margin-padding;
 }
 
 .form__places {
-  margin: 0;
-  padding: 0;
   border: none;
   margin-bottom: 49px;
+
+  @include form-margin-padding;
 }
 
 .form__emotions {
@@ -39,6 +42,12 @@
 }
 
 .form__textarea {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
   height: 150px;
   width: 100%;
   margin: 0;
@@ -47,18 +56,19 @@
   margin-top: 20px;
   margin-bottom: 56px;
   padding: 16px;
-}
 
-.form__textarea::placeholder {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  color: rgba(0, 0, 0, 0.3);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .form__input {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  color: #000000;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
   border: none;
   background-color: #f2f2f2;
   padding: 16px;
@@ -74,15 +84,10 @@
     outline: 4px solid #e5e5e5;
     border: none;
   }
-}
 
-.form__input::placeholder {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  color: rgba(0, 0, 0, 0.3);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .form__control {
@@ -92,7 +97,7 @@
 }
 
 .form__button {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-size: 21px;
   font-weight: 700;

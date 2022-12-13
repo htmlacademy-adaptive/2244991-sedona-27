@@ -3,14 +3,17 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="body">
+  <div class="body__wrapper">
   <header class="header">
-    <a class="logo">
-      <img class="logo-sedona" width="185" height="96" src="./images/logo-sedona.png" alt="Sity of sedona.">
+    <a class="logo" href="./index.html">
+      <img class="logo-sedona" width="185" height="96" src="./img/logo-sedona.png" alt="Sity of sedona.">
     </a>
     <nav class="nav">
       <button class="nav__toggle" type="button">
@@ -18,21 +21,21 @@
       </button>
       <ul class="nav__list">
         <li class="nav__item nav__item--active">
-          <a class="nav__link" href="#">Главная</a>
+          <a class="nav__link" href="./index.html">Главная</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Фото и видео</a>
+          <a class="nav__link" href="./catalog.html">Фото и видео</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Форма отзыва</a>
+          <a class="nav__link" href="./form.html">Форма отзыва</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Html Academy</a>
+          <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a>
         </li>
       </ul>
     </nav>
     <section class="intro intro--index">
-      <img class="intro__welcome-text" width="901" height="389" src="./images/welcome.svg" alt="welcome-to-sedona.">
+      <img class="intro__welcome-text" width="901" height="389" src="./img/welcome.svg" alt="welcome-to-sedona.">
       <h2 class="intro__slogan">
         Седона — небольшой городок в Аризоне, заслуживающий большего!
       </h2>
@@ -54,7 +57,7 @@
               Седона не аттракцион для туристов, там течет своя жизнь
             </p>
           </div>
-          <img class="advantages__image" width="520" height="260" src="./images/house.jpg" alt="Дома.">
+          <img class="advantages__image" width="520" height="260" src="./img/house.jpg" alt="Дома.">
           <ul class="benefits-list">
             <li class="benefits-item benefits-item--house">
               <h3 class="advantages__title">Жилье</h3>
@@ -84,7 +87,7 @@
               Да, по нему можно пройти! Если вы осмелитесь, конечно
             </p>
           </div>
-          <img class="advantages__image" width="520" height="260" src="./images/bridge.jpg" alt="Каньон.">
+          <img class="advantages__image" width="520" height="260" src="./img/bridge.jpg" alt="Каньон.">
         </li>
         <li class="advantages__item advantages__item--not-active">
           <h3 class="advantages__title">Небольшая площадь</h3>
@@ -110,15 +113,16 @@
       </ol>
     </section>
     <section class="find-hotel">
-      <h2 class="find-hotel__title">Заинтересовались?</h2>
-      <p class="find-hotel__discription">
-        Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
-      </p>
-      <a class="find-hotel__button" href="#">Найти гостиницу</a>
+      <div class="find-hotel__wrapper">
+        <h2 class="find-hotel__title">Заинтересовались?</h2>
+        <p class="find-hotel__discription">
+          Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+        </p>
+        <a class="find-hotel__button" href="#">Найти гостиницу</a>
+      </div>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
-      <img class="map__image" width="320" height="350" src="./images/map.jpg" alt="Карта.">
     </section>
   </main>
   <footer class="footer">
@@ -131,10 +135,11 @@
     <div class="copyright">
       <p class="copyright__discription">Разработано</p>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright__image" width="27" height="34" src="./images/logo-htmlacademy.svg" alt="Лого htmlacademy.">
+        <img class="copyright__image" width="27" height="34" src="./img/logo-htmlacademy.svg" alt="Лого htmlacademy.">
       </a>
     </div>
   </footer>
+  </div>
 </body>
 
 </html>

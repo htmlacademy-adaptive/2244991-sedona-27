@@ -1,8 +1,12 @@
-body {
-  font-family: "PT Sans", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+@use "./variables.scss";
+
+.body {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 21px;
-  max-width: 320px;
+  line-height: 1.5em;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
