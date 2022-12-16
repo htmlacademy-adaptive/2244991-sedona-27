@@ -1,5 +1,10 @@
 @use "./variables.scss";
 
+.main__slogan {
+  padding: 39px 20px 33px;
+  text-align: center;
+}
+
 .main__title {
   font-size: 18px;
   font-weight: 700;
@@ -11,4 +16,5 @@
 
 .main__discription {
   margin: 0;
+  text-transform: uppercase;
 }

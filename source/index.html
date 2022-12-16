@@ -21,7 +21,7 @@
       </button>
       <ul class="nav__list">
         <li class="nav__item nav__item--active">
-          <a class="nav__link" href="./index.html">Главная</a>
+          <a class="nav__link nav__link--active" href="./index.html">Главная</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="./catalog.html">Фото и видео</a>
@@ -35,21 +35,23 @@
       </ul>
     </nav>
     <section class="intro intro--index">
+      <h1 class="visually-hidden">Sedona</h1>
       <img class="intro__welcome-text" width="901" height="389" src="./img/welcome.svg" alt="welcome-to-sedona.">
-      <h2 class="intro__slogan">
-        Седона — небольшой городок в Аризоне, заслуживающий большего!
-      </h2>
-      <p class="intro__discription">
-        Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
-      </p>
     </section>
   </header>
   <main class="main">
-    <h1 class="visually-hidden">Sedona</h1>
+    <div class="main__slogan">
+      <h2 class="main__title">
+        Седона — небольшой городок в Аризоне, заслуживающий большего!
+      </h2>
+      <p class="main__discription">
+        Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+      </p>
+    </div>
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <ol class="advantages__list">
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--first">
           <div class="advantages__wrapper">
             <h3 class="advantages__title">Настоящий городок</h3>
             <p class="advantages__number">— №1 —</p>
@@ -79,7 +81,7 @@
             </li>
           </ul>
         </li>
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--second">
           <div class="advantages__wrapper">
             <h3 class="advantages__title">Там есть Мост дьявола</h3>
             <p class="advantages__number">— №2 —</p>
@@ -87,7 +89,7 @@
               Да, по нему можно пройти! Если вы осмелитесь, конечно
             </p>
           </div>
-          <img class="advantages__image" width="520" height="260" src="./img/bridge.jpg" alt="Каньон.">
+          <img class="advantages__image advantages__image--canyon" width="520" height="260" src="./img/bridge.jpg" alt="Каньон.">
         </li>
         <li class="advantages__item advantages__item--not-active">
           <h3 class="advantages__title">Небольшая площадь</h3>

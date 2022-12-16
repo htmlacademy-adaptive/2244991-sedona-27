@@ -35,12 +35,17 @@ nav {
   text-transform: uppercase;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
 
-  &--active {
-    color: #766357;
-  }
 
   @media (min-width: variables.$tablet-width) {
     box-shadow: none;
+  }
+}
+
+.nav__link--active {
+  @media (min-width: variables.$tablet-width) {
+    &:hover {
+      color: #766357;
+    }
   }
 }
 
