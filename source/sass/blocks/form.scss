@@ -5,9 +5,16 @@
   padding: 0;
 }
 
+.form {
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .form__subtitle {
   text-transform: uppercase;
-  padding-left: 16px;
+  padding: 16px 16px 0 16px;
 }
 
 .form__box {
@@ -19,26 +26,67 @@
   @include form-margin-padding;
 }
 
-.form__feeling {
-  border: none;
-  margin-bottom: 49px;
+.form__box--name {
+  margin-bottom: 64px;
 
+  @media (min-width: variables.$tablet-width) {
+    margin-right: 43px;
+  }
+}
+
+.form__box--contacts {
+  margin-bottom: 59px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-left: 43px;
+  }
+}
+
+.form__feeling {
   @include form-margin-padding;
+
+  display: grid;
+  border: none;
+  margin-bottom: 59px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1/-1;
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .form__places {
-  border: none;
-  margin-bottom: 49px;
-
   @include form-margin-padding;
+
+  display: grid;
+  border: none;
+  margin-bottom: 59px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1/-1;
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .form__emotions {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  margin: 0;
-  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  margin-bottom: 59px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 1/-1;
+  }
 }
 
 .form__textarea {
@@ -57,9 +105,18 @@
   margin-bottom: 56px;
   padding: 16px;
 
+  @media (min-width: variables.$tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 768px;
+  }
+
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
   }
+
 }
 
 .form__input {
@@ -107,8 +164,29 @@
   text-transform: uppercase;
   border: none;
   padding: 16px 48px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 16px 71px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 16px 101px;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form__comment {
+  font-size: 12px;
+  text-transform: uppercase;
   color: rgba(51, 51, 51, 0.6);
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 14px;
+  }
 }

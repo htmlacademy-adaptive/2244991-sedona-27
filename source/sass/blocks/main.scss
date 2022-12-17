@@ -3,15 +3,36 @@
 .main__slogan {
   padding: 39px 20px 33px;
   text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 484px;
+    padding: 47px 0 55px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 59px 0 44px;
+  }
 }
 
 .main__title {
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
-  padding-bottom: 20px;
-  margin: 0;
+  margin: 0 0 20px;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.main__title--form {
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 1/-1;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .main__discription {

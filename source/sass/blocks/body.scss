@@ -9,4 +9,17 @@
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: #e7e5e5;
+  }
+}
+
+
+.body__wrapper {
+  @media (min-width: variables.$desktop-width) {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
 }

@@ -10,10 +10,36 @@
   margin-block-end: 25px;
   margin-inline-end: 20px;
   margin-inline-start: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+  }
+}
+
+.card--first {
+  grid-column: 1/-1;
 }
 
 .card__image {
   margin-bottom: 15px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.card__text {
+  @media (min-width: variables.$tablet-width) {
+    background-color: #eaeaea;
+    padding: 22px 20px 15px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    color: #ffffff;
+    padding: 17px 27px;
+  }
 }
 
 .card__title {

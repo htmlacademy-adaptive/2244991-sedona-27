@@ -2,4 +2,8 @@
 
 .feedback {
   padding: 24px 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 80px 60px 100px;
+  }
 }

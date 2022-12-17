@@ -1,12 +1,14 @@
 @use "./variables.scss";
 
 .fotogallery {
+  justify-content: center;
+
   @media (min-width: variables.$tablet-width) {
-    width: 648px;
+    padding: 0 60px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 1200px;
+    padding: 0;
   }
 }
 
@@ -41,10 +43,10 @@
 .fotogallery__wrapper {
   @media (min-width: variables.$tablet-width) {
     display: grid;
-    grid-template-columns: 324px 324px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: variables.$desktop-width) {
-    grid-template-columns: 400px 400px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

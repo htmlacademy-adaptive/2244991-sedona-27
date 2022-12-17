@@ -41,14 +41,6 @@ nav {
   }
 }
 
-.nav__link--active {
-  @media (min-width: variables.$tablet-width) {
-    &:hover {
-      color: #766357;
-    }
-  }
-}
-
 .nav__link {
   display: flex;
   justify-content: center;
@@ -59,6 +51,10 @@ nav {
   @media (min-width: variables.$tablet-width) {
     color: #000000;
     padding: 18px 0;
+
+    &:hover {
+      color: #766357;
+    }
   }
 }
 
