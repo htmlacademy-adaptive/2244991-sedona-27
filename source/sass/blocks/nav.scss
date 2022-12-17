@@ -1,16 +1,30 @@
+@use "./variables.scss";
+
 nav {
   background-color: #ffffff;
 }
 
-.nav__toggle {
-
-}
-
 .nav__list {
-  background-color: #81b3d2;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   margin: 0;
   padding: 0;
+  display: none;
+  background-color: #81b3d2;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    box-shadow: none;
+  }
 }
 
 .nav__item {
@@ -18,17 +32,49 @@ nav {
   line-height: 26px;
   font-weight: 700;
   list-style: none;
-  text-align: center;
   text-transform: uppercase;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
-  padding: 17px 70px 12px;
+
+
+  @media (min-width: variables.$tablet-width) {
+    box-shadow: none;
+  }
 }
 
-.nav__item--active {
-
+.nav__link--active {
+  @media (min-width: variables.$tablet-width) {
+    &:hover {
+      color: #766357;
+    }
+  }
 }
 
 .nav__link {
+  display: flex;
+  justify-content: center;
   color: #ffffff;
   text-decoration: none;
+  padding: 17px 70px 12px;
+
+  @media (min-width: variables.$tablet-width) {
+    color: #000000;
+    padding: 18px 0;
+  }
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #ffffff;
+  width: 23px;
+  height: 22px;
+  margin-bottom: 17px;
+  background-image: url("../img/icon-nav.svg");
+  background-repeat: no-repeat;
+  border: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }

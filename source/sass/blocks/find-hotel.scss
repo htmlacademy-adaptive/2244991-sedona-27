@@ -1,13 +1,37 @@
+@use "./variables.scss";
+
 .find-hotel {
-  display: block;
+  display: flex;
   text-align: center;
   padding: 38px 18px 49px;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 61px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 84px;
+  }
+}
+
+.find-hotel__wrapper {
+  @media (min-width: variables.$tablet-width) {
+    width: 435px;
+  }
 }
 
 .find-hotel__title {
   margin: 0;
   margin-bottom: 35px;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    line-height: 26px;
+  }
 }
 
 .find-hotel__discription {
@@ -25,4 +49,8 @@
   text-transform: uppercase;
   background-color: #81b3d2;
   padding: 16px 49px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 15px 121px 18px;
+  }
 }

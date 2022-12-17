@@ -1,3 +1,5 @@
+@use "./variables.scss";
+
 .modal {
   display: flex;
   flex-direction: column;
@@ -5,10 +7,10 @@
   text-align: center;
   text-transform: uppercase;
   padding: 45px 42px 35px 41px;
-}
 
-.modal--sent {
-  padding: 39px 39px 0 37px;
+  &--sent {
+    padding: 39px 39px 0 37px;
+  }
 }
 
 .modal__title {
@@ -25,7 +27,7 @@
 }
 
 .modal__button {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-size: 18px;
   font-weight: 700;

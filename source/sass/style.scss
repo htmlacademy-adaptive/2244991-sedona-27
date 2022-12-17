@@ -7,15 +7,13 @@
 @use "./blocks/benefits-list.scss";
 @use "./blocks/benefits-item.scss";
 @use "./blocks/find-hotel.scss";
-@use "./blocks/map.scss";
 @use "./blocks/footer.scss";
 @use "./blocks/visitsedona.scss";
 @use "./blocks/social.scss";
 @use "./blocks/copyright.scss";
 @use "./blocks/visually-hidden.scss";
 @use "./blocks/body.scss";
-@use "./blocks/fonts.scss";
-@use "./blocks/page.scss";
+@use "./fonts.scss";
 @use "./blocks/fotogallery.scss";
 @use "./blocks/card.scss";
 @use "./blocks/video.scss";
@@ -23,9 +21,6 @@
 @use "./blocks/feedback.scss";
 @use "./blocks/form.scss";
 @use "./blocks/modal.scss";
+@use "./blocks/map.scss";
+@use "./blocks/page.scss";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
