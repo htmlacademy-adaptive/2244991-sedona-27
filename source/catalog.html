@@ -15,12 +15,12 @@
       <a class="logo" href="./index.html">
         <img class="logo-sedona" width="185" height="96" src="./img/logo-sedona.png" alt="Sity of sedona.">
       </a>
-      <nav class="nav">
+      <nav class="nav nav--closed nav--nojs">
         <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="nav__list">
-          <li class="nav__item nav__item--active">
+        <ul class="nav__list nav__list--closed">
+          <li class="nav__item">
             <a class="nav__link" href="./index.html">Главная</a>
           </li>
           <li class="nav__item">
@@ -36,7 +36,7 @@
       </nav>
       <section class="intro intro--catalog">
         <h2 class="visually-hidden">Sedona</h2>
-        <img class="intro__welcome-text" width="901" height="389" src="./img/sedona.svg" alt="Sedona.">
+        <img class="intro__text intro__text--secong-page" width="901" height="389" src="./img/sedona.svg" alt="Sedona.">
       </section>
     </header>
     <main class="main">
@@ -56,37 +56,53 @@
               <img class="card__image card__image--big" width="280" height="280" src="./img/road-mobile.jpg"
                 alt="Шоссе в горизонт.">
               <div class="card__text">
-                <h3 class="card__title">Неродные просторы</h3>
-                <p class="card__discription">Автор фото: Борис</p>
-                <a class="card__button-like" href="#">Like</a>
-                <b class="card__meter">1350</b>
+                <div class="card__name">
+                  <h3 class="card__title">Неродные просторы</h3>
+                  <p class="card__discription">Автор фото: Борис</p>
+                </div>
+                <div class="card__like">
+                  <a class="card__button-like" href="#">Like</a>
+                  <b class="card__meter">1350</b>
+                </div>
               </div>
             </figure>
             <figure class="card">
               <img class="card__image" width="280" height="280" src="./img/flora.jpg" alt="Местная растительность.">
               <div class="card__text">
-                <h3 class="card__title">Местная растительность</h3>
-                <p class="card__discription">Автор фото: Сергей</p>
-                <a class="card__button-like" href="#">Like</a>
-                <b class="card__meter">143</b>
+                <div class="card__name">
+                  <h3 class="card__title">Местная растительность</h3>
+                  <p class="card__discription">Автор фото: Сергей</p>
+                </div>
+                <div class="card__like">
+                  <a class="card__button-like" href="#">Like</a>
+                  <b class="card__meter">143</b>
+                </div>
               </div>
             </figure>
             <figure class="card">
               <img class="card__image" width="280" height="280" src="./img/mountains.jpg" alt="Дорога в горах.">
-              <div class="card__text">
-                <h3 class="card__title">Дорога на север</h3>
-                <p class="card__discription">Автор фото: Петр</p>
-                <a class="card__button-like" href="#">Like</a>
-                <b class="card__meter">96</b>
+              <div class="card__text card__text--background">
+                <div class="card__name">
+                  <h3 class="card__title">Дорога на север</h3>
+                  <p class="card__discription">Автор фото: Петр</p>
+                </div>
+                <div class="card__like">
+                  <a class="card__button-like" href="#">Like</a>
+                  <b class="card__meter">96</b>
+                </div>
               </div>
             </figure>
             <figure class="card">
               <img class="card__image" width="280" height="280" src="./img/bridge.jpg" alt="Мост Дьявола.">
               <div class="card__text">
-                <h3 class="card__title">Мост дьявола</h3>
-                <p class="card__discription">Автор фото: Антон</p>
-                <a class="card__button-like" href="#">Like</a>
-                <b class="card__meter">254</b>
+                <div class="card__name">
+                  <h3 class="card__title">Мост дьявола</h3>
+                  <p class="card__discription">Автор фото: Антон</p>
+                </div>
+                <div class="card__like">
+                  <a class="card__button-like" href="#">Like</a>
+                  <b class="card__meter">254</b>
+                </div>
               </div>
             </figure>
           </div>
@@ -121,6 +137,7 @@
       </div>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>

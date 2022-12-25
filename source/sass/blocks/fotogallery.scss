@@ -1,8 +1,6 @@
 @use "./variables.scss";
 
 .fotogallery {
-  justify-content: center;
-
   @media (min-width: variables.$tablet-width) {
     padding: 0 60px;
   }
@@ -15,12 +13,18 @@
 .fotogallery__text {
   display: block;
   text-align: center;
+  width: 280px;
+  margin: 0 auto;
   padding: 37px 20px 25px;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
     width: 458px;
-    margin: 0 auto;
+    padding: 66px 0 67px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 100px 0 65px;
   }
 }
 
@@ -41,8 +45,10 @@
 }
 
 .fotogallery__wrapper {
+  display: grid;
+  justify-content: center;
+
   @media (min-width: variables.$tablet-width) {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
