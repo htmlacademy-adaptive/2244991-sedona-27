@@ -2,23 +2,29 @@
 
 .fotogallery {
   @media (min-width: variables.$tablet-width) {
-    width: 648px;
+    padding: 0 60px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 1200px;
+    padding: 0;
   }
 }
 
 .fotogallery__text {
   display: block;
   text-align: center;
+  width: 280px;
+  margin: 0 auto;
   padding: 37px 20px 25px;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
     width: 458px;
-    margin: 0 auto;
+    padding: 66px 0 67px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 100px 0 65px;
   }
 }
 
@@ -39,12 +45,14 @@
 }
 
 .fotogallery__wrapper {
+  display: grid;
+  justify-content: center;
+
   @media (min-width: variables.$tablet-width) {
-    display: grid;
-    grid-template-columns: 324px 324px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: variables.$desktop-width) {
-    grid-template-columns: 400px 400px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -8,12 +8,17 @@
   padding: 17px 20px 0;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 58px 60px 0;
+    padding: 58px 60px 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 62px 0 84px;
   }
 }
 
 .video__text {
   margin-bottom: 38px;
+  width: 266px;
 
   @media (min-width: variables.$tablet-width) {
     width: 445px;
@@ -44,7 +49,16 @@
 
 
 .video__presentation {
+  @media (max-width: variables.$tablet-width) {
+    width: 280px;
+  }
+
   @media (min-width: variables.$tablet-width) {
     width: 648px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 800px;
+  }
 }
+

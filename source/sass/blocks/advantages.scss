@@ -54,11 +54,14 @@
   @media (min-width: variables.$tablet-width) {
     padding: 52px 33px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 63px 50px 41px;
+  }
 }
 
 .advantages__title {
-  margin: 0;
-  padding-bottom: 16px;
+  margin: 0 0 16px;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
@@ -69,8 +72,7 @@
 }
 
 .advantages__number {
-  margin: 0;
-  padding-bottom: 11px;
+  margin: 0 0 11px;
   text-transform: uppercase;
 }
 

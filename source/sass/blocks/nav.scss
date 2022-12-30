@@ -7,23 +7,21 @@ nav {
 .nav__list {
   margin: 0;
   padding: 0;
-  display: none;
+  min-height: 56px;
   background-color: #81b3d2;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-
 
   @media (min-width: variables.$tablet-width) {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     background-color: #ffffff;
     box-shadow: none;
   }
+}
 
-  @media (min-width: variables.$desktop-width) {
-    display: flex;
-    justify-content: space-around;
-    background-color: #ffffff;
-    box-shadow: none;
+.nav__list--closed {
+  @media (max-width: variables.$tablet-width) {
+    display: none;
   }
 }
 
@@ -33,19 +31,12 @@ nav {
   font-weight: 700;
   list-style: none;
   text-transform: uppercase;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
 
 
   @media (min-width: variables.$tablet-width) {
-    box-shadow: none;
-  }
-}
-
-.nav__link--active {
-  @media (min-width: variables.$tablet-width) {
-    &:hover {
-      color: #766357;
-    }
+    border: none;
   }
 }
 
@@ -58,11 +49,16 @@ nav {
 
   @media (min-width: variables.$tablet-width) {
     color: #000000;
-    padding: 18px 0;
+    padding: 18px 0 17px;
+
+    &:hover {
+      color: #766357;
+    }
   }
 }
 
 .nav__toggle {
+  content: "";
   position: absolute;
   top: 60px;
   right: 20px;
@@ -70,11 +66,48 @@ nav {
   width: 23px;
   height: 22px;
   margin-bottom: 17px;
-  background-image: url("../img/icon-nav.svg");
+
   background-repeat: no-repeat;
   border: none;
+  cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
     display: none;
   }
+}
+
+.nav--closed .nav__toggle::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-nav.svg");
+  width: 23px;
+  height: 22px;
+  top: 0;
+  right: 0;
+}
+
+.nav--open .nav__toggle::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/icon-close.svg");
+  z-index: 2;
+  top: 54px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.nav__list::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  height: 7px;
+  width: 100%;
+  box-shadow: 0, 1px rgba(255, 255, 255, 0.2);
+}
+
+.nav--nojs {
+  position: static;
 }
