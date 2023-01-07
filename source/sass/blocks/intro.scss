@@ -8,23 +8,26 @@
 }
 
 .intro--index {
-  background: #81b3d2;
+  background-color: #81b3d2;
   background-image: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: 50% -65px;
-  padding-top: 90px;
-  height: 389px;
+  background-size: cover;
+  background-position: 50%;
+  padding: 90px 0 90px;
 
   @media (min-width: variables.$tablet-width) {
     background-image: url("../img/back-desktop.jpg");
-    background-size: cover;
-    padding-top: 77px;
+    padding: 77px 0 90px;
     background-position: 50% 0;
-    height: 518px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 }
 
-.intro--form {
+.intro--next-page {
   background: #81b3d2;
   background-image: url("../img/back-desktop.jpg");
   background-repeat: no-repeat;
@@ -33,22 +36,11 @@
 
   @media (min-width: variables.$tablet-width) {
     height: 223px;
-  }
 
-  @media (min-width: variables.$desktop-width) {
-    height: 301px;
-  }
-}
-
-.intro--catalog {
-  background: #81b3d2;
-  background-image: url("../img/back-desktop.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% -218px;
-  height: 158px;
-
-  @media (min-width: variables.$tablet-width) {
-    height: 223px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -58,7 +50,7 @@
 
 .intro__text {
   height: 59vh;
-  width: 88%; /*не нравится что получается при 700px*/
+  width: 88%;
   margin-left: auto;
   margin-right: auto;
 
@@ -68,10 +60,17 @@
 
   @media (min-width: variables.$desktop-width) {
     width: 38%;
-    height: 77%;
   }
 }
 
 .intro__text--secong-page {
   width: 71%;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 59%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 38%;
+  }
 }

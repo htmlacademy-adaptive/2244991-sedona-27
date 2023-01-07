@@ -28,22 +28,6 @@
   }
 }
 
-.fotogallery__title {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  margin: 0;
-  margin-bottom: 25px;
-
-  @media (min-width: variables.$tablet-width) {
-    font-size: 30px;
-  }
-}
-
-.fotogallery__discription {
-  margin: 0;
-}
-
 .fotogallery__wrapper {
   display: grid;
   justify-content: center;

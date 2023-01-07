@@ -23,23 +23,6 @@
   }
 }
 
-.find-hotel__title {
-  margin: 0;
-  margin-bottom: 35px;
-  text-transform: uppercase;
-
-  @media (min-width: variables.$tablet-width) {
-    font-size: 30px;
-    line-height: 26px;
-  }
-}
-
-.find-hotel__discription {
-  margin: 0;
-  margin-bottom: 48px;
-  text-transform: uppercase;
-}
-
 .find-hotel__button {
   color: #ffffff;
   font-weight: 700;

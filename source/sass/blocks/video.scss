@@ -26,29 +26,9 @@
   }
 }
 
-.video__title {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 25px;
-
-  @media (min-width: variables.$tablet-width) {
-    font-size: 30px;
-  }
-}
-
-.video__discription {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-
 .video__presentation {
+  position: relative;
+
   @media (max-width: variables.$tablet-width) {
     width: 280px;
   }
@@ -59,6 +39,16 @@
 
   @media (min-width: variables.$desktop-width) {
     width: 800px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 54px;
+    background-image: url("../img/polygon");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 

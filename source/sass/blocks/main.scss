@@ -16,12 +16,17 @@
 }
 
 .main__title {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 21px;
   line-height: 26px;
-  margin: 0 0 20px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 25px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .main__title--form {
@@ -38,4 +43,12 @@
 .main__discription {
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    line-height: 24px;
+  }
+}
+
+.main__discription--margin {
+  margin-bottom: 48px;
 }
