@@ -5,6 +5,7 @@
   flex-direction: column;
   text-align: center;
   padding: 28px 18px;
+  align-items: center;
 
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;

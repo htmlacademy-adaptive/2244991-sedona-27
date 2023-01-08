@@ -10,5 +10,10 @@
   @media (min-width: variables.$tablet-width) {
     width: 434px;
     margin: 0 auto;
+    padding: 66px 0 67px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 100px 0 65px;
   }
 }

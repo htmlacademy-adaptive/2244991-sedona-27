@@ -79,9 +79,15 @@
 .advantages__discription {
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+
+    line-height: 21px;
+  }
 }
 
 .advantages__image {
+  display: block;
   width: 100%;
 }
 

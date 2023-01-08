@@ -13,7 +13,7 @@
   <div class="body__wrapper">
     <header class="header">
       <a class="logo" href="./index.html">
-        <img class="logo-sedona" width="185" height="96" src="./img/logo-sedona.png" alt="Sity of sedona.">
+        <img class="logo-sedona" width="185" height="96" src="./img/logo-sedona.svg" alt="Sity of sedona.">
       </a>
       <nav class="nav nav--closed nav--nojs">
         <button class="nav__toggle" type="button">
@@ -23,7 +23,7 @@
           <li class="nav__item">
             <a class="nav__link" href="./index.html">Главная</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item--foto">
             <a class="nav__link" href="./catalog.html">Фото и видео</a>
           </li>
           <li class="nav__item">
@@ -34,7 +34,7 @@
           </li>
         </ul>
       </nav>
-      <section class="intro intro--catalog">
+      <section class="intro intro--next-page">
         <h2 class="visually-hidden">Sedona</h2>
         <img class="intro__text intro__text--secong-page" width="901" height="389" src="./img/sedona.svg" alt="Sedona.">
       </section>
@@ -46,15 +46,21 @@
         </h1>
         <section class="fotogallery">
           <div class="fotogallery__text">
-            <h2 class="fotogallery__title">Фото и видео</h2>
-            <p class="fotogallery__discription">
+            <h2 class="main__title">Фото и видео</h2>
+            <p class="main__discription">
               Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
             </p>
           </div>
           <div class="fotogallery__wrapper">
             <figure class="card card--first">
-              <img class="card__image card__image--big" width="280" height="280" src="./img/road-mobile.jpg"
-                alt="Шоссе в горизонт.">
+              <picture>
+                <source media="(min-width: 1200px)" width="1200" height="400"
+                srcset="./img/road-desktop.jpg, ./img/road-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="648" height="400"
+                srcset="./img/road-tablet.jpg, ./img/road-tablet@2x.jpg 2x">
+                <img class="card__image card__image--big" width="280" height="280" src="./img/road-mobile.jpg"
+                  srcset="./img/road-mobile@2x.jpg 2x" alt="Шоссе в горизонт.">
+              </picture>
               <div class="card__text">
                 <div class="card__name">
                   <h3 class="card__title">Неродные просторы</h3>
@@ -67,7 +73,14 @@
               </div>
             </figure>
             <figure class="card">
-              <img class="card__image" width="280" height="280" src="./img/flora.jpg" alt="Местная растительность.">
+              <picture>
+                <source media="(min-width: 1200px)" width="400" height="267"
+                srcset="./img/flora-desktop.jpg, ./img/flora-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="324" height="267"
+                srcset="./img/flora-tablet.jpg, ./img/flora-tablet@2x.jpg 2x">
+                <img class="card__image" width="280" height="280"
+                src="./img/flora-mobile.jpg" srcset="./img/flora-mobile@2x.jpg 2x" alt="Местная растительность.">
+              </picture>
               <div class="card__text">
                 <div class="card__name">
                   <h3 class="card__title">Местная растительность</h3>
@@ -80,7 +93,14 @@
               </div>
             </figure>
             <figure class="card">
-              <img class="card__image" width="280" height="280" src="./img/mountains.jpg" alt="Дорога в горах.">
+              <picture>
+                <source media="(min-width: 1200px)" width="400" height="267"
+                srcset="./img/mountains-desktop.jpg, ./img/mountains-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="324" height="267"
+                srcset="./img/mountains-tablet.jpg, ./img/mountains-tablet@2x.jpg 2x">
+                <img class="card__image" width="280" height="280"
+                src="./img/mountains-mobile.jpg" srcset="./img/mountains-mobile@2x.jpg 2x" alt="Дорога в горах.">
+              </picture>
               <div class="card__text card__text--background">
                 <div class="card__name">
                   <h3 class="card__title">Дорога на север</h3>
@@ -93,7 +113,14 @@
               </div>
             </figure>
             <figure class="card">
-              <img class="card__image" width="280" height="280" src="./img/bridge.jpg" alt="Мост Дьявола.">
+              <picture>
+                <source media="(min-width: 1200px)" width="400" height="267"
+                srcset="./img/bridge-desktop.jpg, ./img/bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="324" height="267"
+                srcset="./img/bridge-tablet.jpg, ./img/bridge-tablet@2x.jpg 2x">
+                <img class="card__image" width="280" height="280"
+                src="./img/bridge-mobile.jpg" srcset="./img/bridge-mobile@2x.jpg 2x" alt="Мост Дьявола.">
+              </picture>
               <div class="card__text">
                 <div class="card__name">
                   <h3 class="card__title">Мост дьявола</h3>
@@ -109,8 +136,8 @@
         </section>
         <section class="video">
           <div class="video__text">
-            <h2 class="video__title">Все еще сомневаетесь?</h2>
-            <p class="video__discription">
+            <h2 class="main__title">Все еще сомневаетесь?</h2>
+            <p class="main__discription">
               Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
             </p>
           </div>
@@ -125,9 +152,15 @@
     <footer class="footer">
       <a class="visitsedona" href="#">#VISITSEDONA</a>
       <div class="social">
-        <a class="social__link social__link--vkontacte" href="#">vkontakte</a>
-        <a class="social__link social__link--telegram" href="#">telegram</a>
-        <a class="social__link social__link--youtube" href="#">youtube</a>
+        <a class="social__link social__link--vkontakte" href="#">
+          <span class="visually-hidden">vkontakte</span>
+        </a>
+        <a class="social__link social__link--telegram" href="#">
+          <span class="visually-hidden">telegram</span>
+        </a>
+        <a class="social__link social__link--youtube" href="#">
+          <span class="visually-hidden">youtube</span>
+        </a>
       </div>
       <div class="copyright">
         <p class="copyright__discription">Разработано</p>

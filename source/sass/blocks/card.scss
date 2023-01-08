@@ -22,6 +22,7 @@
 
 .card__image {
   margin-bottom: 15px;
+  display: block;
 
   @media (min-width: variables.$tablet-width) {
     width: 100%;
