@@ -12,6 +12,25 @@
   }
 }
 
+.form__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 21px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 55px;
+  }
+}
+
 .form__subtitle {
   text-transform: uppercase;
   padding: 16px 16px 0 16px;
