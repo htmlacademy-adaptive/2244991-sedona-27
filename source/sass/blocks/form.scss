@@ -6,6 +6,8 @@
 }
 
 .form {
+  position: relative;
+
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -24,9 +26,10 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 21px;
     margin-bottom: 40px;
+    padding: 0 50px;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$desktop-width) {
     margin-bottom: 55px;
   }
 }
@@ -47,17 +50,35 @@
 
 .form__box--name {
   margin-bottom: 64px;
+  border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
     margin-right: 43px;
+    border-bottom: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 370px;
+    border: 1px solid #dbdbdb;
+
+    @media (max-width: variables.$tablet-width) {
+      border-bottom: none;
+      display: none;
+    }
   }
 }
 
 .form__box--contacts {
   margin-bottom: 59px;
+  border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
     margin-left: 43px;
+    border-bottom: none;
   }
 }
 
@@ -67,11 +88,14 @@
   display: grid;
   border: none;
   margin-bottom: 59px;
+  border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     grid-column: 1/-1;
     margin-bottom: 58px;
+    border-bottom: none;
+    border-top: 1px solid #dbdbdb;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -85,11 +109,14 @@
   display: grid;
   border: none;
   margin-bottom: 59px;
+  border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     grid-column: 1/-1;
     margin-bottom: 58px;
+    border-bottom: none;
+    border-top: 1px solid #dbdbdb;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -105,6 +132,7 @@
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
+    border-top: 1px solid #dbdbdb;
   }
 }
 
