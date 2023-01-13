@@ -7,6 +7,29 @@
   padding: 0 18px;
 }
 
+.intro::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/intro-line.svg");
+  background-repeat: repeat;
+  width: 599.9px;
+  height: 57px;
+  bottom: 0;
+  left: 50%;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/intro-line.svg");
+  background-repeat: repeat;
+  transform: scaleX(-1);
+  width: 599.9px;
+  height: 57px;
+  bottom: -1px;
+  right: 50%;
+}
+
 .intro--index {
   background-color: #81b3d2;
   background-image: url("../img/back-mobile.jpg");

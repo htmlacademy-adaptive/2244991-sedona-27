@@ -14,6 +14,10 @@
   @media (min-width: variables.$tablet-width) {
     margin: 0;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    position: relative;
+  }
 }
 
 .card--first {
@@ -43,11 +47,16 @@
   @media (min-width: variables.$desktop-width) {
     color: #ffffff;
     padding: 17px 27px;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(50, 50, 50, 0.5);
+    bottom: 0;
   }
 }
 
 .card__text--background {
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
     background-color: #eaeaea;
   }
 }
@@ -65,4 +74,11 @@
 
 .card__button-like {
   padding-right: 14px;
+  color: #000000;
+  opacity: 0.3;
+
+  @media (min-width: variables.$desktop-width) {
+    color: #ffffff;
+    opacity: 1;
+  }
 }

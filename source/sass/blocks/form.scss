@@ -6,9 +6,31 @@
 }
 
 .form {
+  position: relative;
+
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 21px;
+    margin-bottom: 40px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 55px;
   }
 }
 
@@ -28,17 +50,35 @@
 
 .form__box--name {
   margin-bottom: 64px;
+  border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
     margin-right: 43px;
+    border-bottom: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 370px;
+    border: 1px solid #dbdbdb;
+
+    @media (max-width: variables.$tablet-width) {
+      border-bottom: none;
+      display: none;
+    }
   }
 }
 
 .form__box--contacts {
   margin-bottom: 59px;
+  border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
     margin-left: 43px;
+    border-bottom: none;
   }
 }
 
@@ -48,11 +88,14 @@
   display: grid;
   border: none;
   margin-bottom: 59px;
+  border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     grid-column: 1/-1;
     margin-bottom: 58px;
+    border-bottom: none;
+    border-top: 1px solid #dbdbdb;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -66,11 +109,14 @@
   display: grid;
   border: none;
   margin-bottom: 59px;
+  border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     grid-column: 1/-1;
     margin-bottom: 58px;
+    border-bottom: none;
+    border-top: 1px solid #dbdbdb;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -86,6 +132,7 @@
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
+    border-top: 1px solid #dbdbdb;
   }
 }
 
@@ -100,6 +147,7 @@
   width: 100%;
   margin: 0;
   border: none;
+  outline: none;
   background-color: #f2f2f2;
   margin-top: 20px;
   margin-bottom: 56px;
@@ -126,19 +174,18 @@
   font-size: 18px;
   line-height: 26px;
   border: none;
+  outline: none;
   background-color: #f2f2f2;
   padding: 16px;
 
   &:hover {
     color: #000000;
     background-color: #e5e5e5;
-    border: none;
   }
 
   &:active {
     background: #ffffff;
     outline: 4px solid #e5e5e5;
-    border: none;
   }
 
   &::placeholder {
@@ -147,9 +194,76 @@
 }
 
 .form__control {
+  position: relative;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  padding: 18px 62px;
+}
+
+.form__control--radio::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.form__control--radio::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 46px;
+  height: 46px;
+  background-image: url("../img/radio.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+}
+
+
+.form__radio:checked + .form__control--radio::after {
+  display: block;
+}
+
+.form__control--chekbox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.form__control--chekbox::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 46px;
+  height: 46px;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+}
+
+.form__chekbox:checked + .form__control--chekbox::after {
+  display: block;
+}
+
+.form__chekbox {
+  display: none;
+}
+
+.form__radio {
+  display: none;
 }
 
 .form__button {
@@ -163,6 +277,15 @@
   text-transform: uppercase;
   border: none;
   padding: 16px 48px;
+  box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, 0.2);
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
 
   @media (min-width: variables.$tablet-width) {
     padding: 16px 71px;
@@ -170,6 +293,12 @@
 
   @media (min-width: variables.$desktop-width) {
     padding: 16px 101px;
+  }
+}
+
+.form__button-text {
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -189,3 +318,4 @@
     font-size: 14px;
   }
 }
+

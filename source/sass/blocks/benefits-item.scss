@@ -1,10 +1,88 @@
 @use "./variables.scss";
 
 .benefits-item {
+  position: relative;
   padding-bottom: 33px;
+  padding-left: 47px;
+  text-align: left;
 
   @media (min-width: variables.$tablet-width) {
     width: 190px;
     padding: 0;
+    padding-top: 158px;
+    text-align: center;
+  }
+}
+
+.benefits-item--house::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/house.svg");
+  background-repeat: repeat;
+  background-size: 100%;
+  width: 39px;
+  height: 36px;
+  top: -10px;
+  left: 0;
+
+
+  @media (min-width: variables.$tablet-width) {
+    width: 77px;
+    height: 75px;
+    top: 20%;
+    left: 30%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 79px;
+  }
+}
+
+.benefits-item--food::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/burger.svg");
+  background-repeat: repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+  top: -10px;
+  left: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 30%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 73px;
+    height: 76px;
+  }
+}
+
+.benefits-item--souvenir::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/gift.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 32px;
+  height: 38px;
+  top: -10px;
+  left: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 67px;
+    height: 80px;
+    top: 20%;
+    left: 30%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 78px;
+    height: 75px;
+    background-size: contain;
   }
 }

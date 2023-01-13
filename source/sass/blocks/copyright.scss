@@ -1,13 +1,23 @@
 @use "./variables.scss";
 
-.copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .copyright__discription {
   margin: 0;
   text-transform: uppercase;
   margin-right: 12px;
+}
+
+.copyright__link {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
 }
