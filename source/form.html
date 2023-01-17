@@ -6,7 +6,7 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="body">
@@ -80,34 +80,34 @@
             <Legend class="form__title main__title--form">
               Ваше общее впечатление:
             </Legend>
-            <input class="form__radio" id="positive" type="radio" name="feeling" value="positive">
+            <input class="form__radio visually-hidden" id="positive" type="radio" name="feeling" value="positive">
             <label class="form__control form__control--radio" for="positive">
               Скорее положительное
             </label>
-            <input class="form__radio" id="negative" type="radio" name="feeling" value="negative">
+            <input class="form__radio visually-hidden" id="negative" type="radio" name="feeling" value="negative">
             <label class="form__control form__control--radio" for="negative">
               Скорее отрицательное
             </label>
-            <input class="form__radio" id="no-answer" type="radio" name="feeling" value="no-answer">
+            <input class="form__radio visually-hidden" id="no-answer" type="radio" name="feeling" value="no-answer">
             <label class="form__control form__control--radio" for="no-answer">
               Затрудняюсь ответить
             </label>
           </fieldset>
           <fieldset class="form__places">
             <Legend class="form__title main__title--form">Посещенные <br> достопримечательности:</Legend>
-            <input class="form__chekbox" id="devil_bridge" type="checkbox" name="devil-bridge">
+            <input class="form__chekbox visually-hidden" id="devil_bridge" type="checkbox" name="devil-bridge">
             <label class="form__control form__control--chekbox" for="devil_bridge">
               Мост Дьявола
             </label>
-            <input class="form__chekbox" id="mountain_bell" type="checkbox" name="mountain-bell">
+            <input class="form__chekbox visually-hidden" id="mountain_bell" type="checkbox" name="mountain-bell">
             <label class="form__control form__control--chekbox" for="mountain_bell">
               Гора-Колокол
             </label>
-            <input class="form__chekbox" id="slide_park" type="checkbox" name="slide-park">
+            <input class="form__chekbox visually-hidden" id="slide_park" type="checkbox" name="slide-park">
             <label class="form__control form__control--chekbox" for="slide_park">
               Слайд-парк
             </label>
-            <input class="form__chekbox" id="red_rocks" type="checkbox" name="red-rocks">
+            <input class="form__chekbox visually-hidden" id="red_rocks" type="checkbox" name="red-rocks">
             <label class="form__control form__control--chekbox" for="red_rocks">
               Красные скалы
             </label>
@@ -150,35 +150,35 @@
         </a>
       </div>
     </footer>
-    <div class="modal__container modal__container--closed">
-      <div class="modal modal--error">
-        <div class="modal__text">
-        <h2 class="modal__title">Что-то пошло не так!</h2>
-        <p class="modal__discription">
-          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
-        </p>
-        </div>
-        <button class="modal__button modal__button--ok" type="button">
-          <span class="modal__text-button">ок</span>
-        </button>
+  </div>
+  <script src="./js/script.js"></script>
+  <div class="modal modal--closed">
+    <div class="modal__error">
+      <div class="modal__text">
+      <h2 class="modal__title">Что-то пошло не так!</h2>
+      <p class="modal__discription">
+        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+      </p>
       </div>
+      <button class="modal__button modal__button--ok" type="button">
+        <span class="modal__text-button">ок</span>
+      </button>
     </div>
-    <div class="modal__container modal__container--closed">
-      <div class="modal modal--accepted">
-        <div class="modal__text modal__text--sent">
+  </div>
+  <div class="modal modal--closed">
+    <div class="modal__accepted">
+      <div class="modal__text modal__text--sent">
         <h2 class="modal__title">Ваш отзыв отправлен!</h2>
         <p class="modal__discription">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы
           опубликуем его на сайте.</p>
-        </div>
-          <div class="modal__border">
-            <button class="modal__button modal__button--closed" type="button">
-              <span class="modal__text-button">Закрыть окно</span>
-            </button>
-          </div>
+      </div>
+      <div class="modal__border">
+        <button class="modal__button modal__button--closed" type="button">
+          <span class="modal__text-button">Закрыть окно</span>
+        </button>
       </div>
     </div>
   </div>
-  <script src="./js/script.js"></script>
 </body>
 
 </html>

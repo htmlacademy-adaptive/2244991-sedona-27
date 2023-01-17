@@ -72,7 +72,6 @@
 }
 
 .intro__text {
-  height: 59vh;
   width: 88%;
   margin-left: auto;
   margin-right: auto;
@@ -88,6 +87,7 @@
 
 .intro__text--secong-page {
   width: 71%;
+  object-fit: contain;
 
   @media (min-width: variables.$tablet-width) {
     width: 59%;
