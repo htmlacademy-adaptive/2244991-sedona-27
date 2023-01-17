@@ -129,6 +129,7 @@
   padding: 0;
   border: none;
   margin-bottom: 59px;
+  width: 100%;
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
@@ -155,6 +156,9 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 648px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -183,9 +187,10 @@
     background-color: #e5e5e5;
   }
 
-  &:active {
+  &:focus {
     background: #ffffff;
-    outline: 4px solid #e5e5e5;
+    outline: none;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
   }
 
   &::placeholder {
@@ -212,6 +217,14 @@
   border-radius: 50%;
 }
 
+.form__control--radio:hover::before {
+  background-color: #e5e5e5;
+}
+
+.form__control--radio:active::before {
+  background-color: #d5d5d5;
+}
+
 .form__control--radio::after {
   content: "";
   position: absolute;
@@ -225,6 +238,9 @@
   display: none;
 }
 
+.form__control--radio:active::after {
+  opacity: 0.3;
+}
 
 .form__radio:checked + .form__control--radio::after {
   display: block;
@@ -241,6 +257,14 @@
   border-radius: 4px;
 }
 
+.form__control--chekbox:hover::before {
+  background-color: #e5e5e5;
+}
+
+.form__control--chekbox:active::before {
+  background-color: #d5d5d5;
+}
+
 .form__control--chekbox::after {
   content: "";
   position: absolute;
@@ -254,16 +278,12 @@
   display: none;
 }
 
+.form__control--chekbox:active::after {
+  opacity: 0.3;
+}
+
 .form__chekbox:checked + .form__control--chekbox::after {
   display: block;
-}
-
-.form__chekbox {
-  display: none;
-}
-
-.form__radio {
-  display: none;
 }
 
 .form__button {
@@ -277,7 +297,6 @@
   text-transform: uppercase;
   border: none;
   padding: 16px 48px;
-  box-shadow: 1px 1px 1px 1px rgba(1, 1, 1, 0.2);
 
   &:hover {
     background-color: #669ec0;

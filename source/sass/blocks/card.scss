@@ -76,6 +76,8 @@
   padding-right: 14px;
   color: #000000;
   opacity: 0.3;
+  text-decoration: none;
+  cursor: pointer;
 
   @media (min-width: variables.$desktop-width) {
     color: #ffffff;
