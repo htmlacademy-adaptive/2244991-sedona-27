@@ -1,31 +1,53 @@
 @use "./variables.scss";
 
 .main__slogan {
-  padding: 39px 20px 33px;
+  padding: 34px 24px 33px;
   text-align: center;
   margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
-    width: 484px;
-    padding: 47px 0 55px;
+    padding: 49px 0 52px;
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 59px 0 44px;
+    width: 600px;
   }
 }
 
 .main__title {
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 38px;
   text-transform: uppercase;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 30px;
+  }
+}
+
+.main__title--larger {
+  @media (max-width: variables.$tablet-width) {
+    font-size: 21px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 33px;
+  }
+}
+
+.main__title--slogan {
+  font-size: 18px;
+  margin-bottom: 36px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 21px;
+    margin-bottom: 28px;
+    margin-left: 18px;
   }
 }
 
@@ -51,4 +73,16 @@
 
 .main__discription--margin {
   margin-bottom: 48px;
+}
+
+.main__discription--slogan {
+  @media (min-width: variables.$tablet-width) {
+    margin-left: 24px;
+  }
+}
+
+.main__discription br {
+  @media (max-width: variables.$tablet-width) {
+    display: none;
+  }
 }

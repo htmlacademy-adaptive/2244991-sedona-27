@@ -1,7 +1,7 @@
 @use "./variables.scss";
 
 .social {
-  margin-bottom: 46px;
+  margin-bottom: 40px;
   display: inline-flex;
   flex-wrap: wrap;
 
@@ -13,7 +13,8 @@
 
 .social__link {
   position: relative;
-  margin-right: 6px;
+  margin-right: 3px;
+  margin-left: 3px;
   width: 48px;
   height: 48px;
   background-color: #81b3d2;

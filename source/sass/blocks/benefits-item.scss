@@ -2,7 +2,7 @@
 
 .benefits-item {
   position: relative;
-  padding-bottom: 33px;
+  padding-bottom: 34px;
   padding-left: 47px;
   text-align: left;
 
@@ -70,8 +70,8 @@
   background-size: 100%;
   width: 32px;
   height: 38px;
-  top: -10px;
-  left: 0;
+  top: -7px;
+  left: 4px;
 
   @media (min-width: variables.$tablet-width) {
     width: 67px;

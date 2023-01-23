@@ -6,6 +6,10 @@
   transform: translateX(-50%);
   display: block;
   text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    transform: translateX(-45%);
+  }
 }
 
 .logo--nav-open {

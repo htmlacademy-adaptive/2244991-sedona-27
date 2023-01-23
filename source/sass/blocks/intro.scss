@@ -36,17 +36,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
-  padding: 90px 0 90px;
+  padding: 91px 0 84px;
 
   @media (min-width: variables.$tablet-width) {
     background-image: url("../img/back-desktop.jpg");
     padding: 77px 0 90px;
-    background-position: 50% 0;
+    background-position: 48% 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/back-desktop@2x.jpg");
       background-size: 1200px auto;
     }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 94px;
   }
 }
 
@@ -72,12 +76,16 @@
 }
 
 .intro__text {
+  position: relative;
   width: 88%;
+  height: 80%;
   margin-left: auto;
   margin-right: auto;
+  object-fit: contain;
 
   @media (min-width: variables.$tablet-width) {
-    width: 60%;
+    width: 62%;
+    left: 10px;
   }
 
   @media (min-width: variables.$desktop-width) {
