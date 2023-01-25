@@ -1,5 +1,9 @@
 @use "./variables.scss";
 
+.main {
+  position: relative;
+}
+
 .main__slogan {
   padding: 34px 24px 33px;
   text-align: center;
@@ -12,6 +16,21 @@
   @media (min-width: variables.$desktop-width) {
     padding: 59px 0 43px;
     width: 600px;
+  }
+}
+
+.main__slogan::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/white-copy.svg");
+  background-repeat: repeat;
+  width: 768px;
+  height: 37px;
+  top: 205px;
+  left: 0;
+
+  @media (min-width: 350px) {
+    display: none;
   }
 }
 

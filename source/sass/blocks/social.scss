@@ -31,6 +31,10 @@
     background-position: center;
   }
 
+  &:focus {
+    outline: 4px solid #dbdbdb;
+  }
+
   &:active::before {
     opacity: 0.3;
   }

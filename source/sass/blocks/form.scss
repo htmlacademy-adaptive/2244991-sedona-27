@@ -27,10 +27,15 @@
   text-transform: uppercase;
   text-align: center;
 
+  &--emotions {
+    margin-left: -39px;
+  }
+
   @media (min-width: variables.$tablet-width) {
     font-size: 21px;
     margin-bottom: 40px;
     padding: 0 50px;
+    background-color: #ffffff;
 
     &--name {
       margin-bottom: 12px;
@@ -38,23 +43,30 @@
     }
 
     &--phone {
-      padding: 10px 0 0;
-      margin-left: -19px;
-      margin-bottom: 8px;
+      padding: 6px 0 0;
+      margin-left: -39px;
+      margin-bottom: 12px;
     }
 
     &--feeling {
       margin-bottom: 12px;
+      margin-top: -13px;
+      width: 400px;
+      margin-left: 39px;
     }
 
     &--places {
       margin-bottom: 14px;
-      padding-left: 16px;
+      margin-top: -25px;
+      margin-left: -10px;
+      width: 400px;
     }
 
     &--emotions {
-      margin-left: -11px;
-      margin-bottom: 7px;
+      margin-left: 123px;
+      margin-bottom: 28px;
+      margin-top: -19px;
+      width: 400px;
     }
   }
 
@@ -67,22 +79,24 @@
     }
 
     &--phone {
-      margin-left: -33px;
-      margin-bottom: 6px;
+      margin-left: -66px;
+      margin-bottom: 9px;
     }
 
     &--feeling {
-      margin-bottom: 28px;
-      margin-left: -35px;
+      margin-bottom: 31px;
+      margin-left: 178px;
     }
 
     &--places {
       margin-bottom: 44px;
-      margin-left: -8px;
+      margin-left: 186px;
     }
 
     &--emotions {
-      margin-bottom: 6px;
+      margin-bottom: 28px;
+      margin-top: -13px;
+      margin-left: 332px;
     }
   }
 }
@@ -130,7 +144,7 @@
     background-repeat: no-repeat;
     width: 18px;
     height: 18px;
-    top: 56px;
+    top: 59px;
     right: 18px;
   }
 }
@@ -152,7 +166,7 @@
 
   @media (min-width: variables.$tablet-width) {
     margin-right: 33px;
-    margin-bottom: 31px;
+    margin-bottom: 43px;
     border-bottom: none;
     padding-left: 60px;
     padding-top: 10px;
@@ -163,7 +177,7 @@
     position: absolute;
     top: 0;
     left: 50%;
-    height: 370px;
+    height: 342px;
     border: 1px solid #dbdbdb;
 
     @media (max-width: variables.$tablet-width) {
@@ -179,7 +193,7 @@
   @media (min-width: variables.$desktop-width) {
     padding-left: 120px;
     margin-right: 38px;
-    margin-bottom: 40px;
+    margin-bottom: 51px;
   }
 }
 
@@ -188,7 +202,7 @@
   border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
-    margin-left: 31px;
+    margin-left: 36px;
     border-bottom: none;
     padding-right: 60px;
   }
@@ -205,15 +219,14 @@
   display: grid;
   border: none;
   margin: 24px 0 49px;
-
-  @media (max-width: variables.$tablet-width) {
-    @include form-padding-20;
-  }
+  padding: 0 20px;
 
   @media (min-width: variables.$tablet-width) {
+    @include form-padding-20;
+
     grid-template-columns: repeat(2, 1fr);
     grid-column: 1/-1;
-    margin-bottom: 48px;
+    margin-bottom: 73px;
     border-bottom: none;
     border-top: 1px solid #dbdbdb;
     padding: 0 95px 0 95px;
@@ -222,26 +235,23 @@
   @media (min-width: variables.$desktop-width) {
     grid-template-columns: repeat(3, 1fr);
     padding: 0 104px 0 174px;
-    margin-bottom: 74px;
+    margin-bottom: 96px;
   }
 }
 
 .form__places {
   @include form-margin-padding;
+  @include form-padding-20;
 
   display: grid;
   border: none;
   padding-bottom: 21px;
   border-bottom: 1px solid #dbdbdb;
 
-  @media (max-width: variables.$tablet-width) {
-    @include form-padding-20;
-  }
-
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     grid-column: 1/-1;
-    margin-bottom: 17px;
+    margin-bottom: 34px;
     border-bottom: none;
     border-top: 1px solid #dbdbdb;
     padding: 0 114px 0 143px;
@@ -250,24 +260,27 @@
   @media (min-width: variables.$desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     padding: 0 118px 0 166px;
-    margin-bottom: 63px;
+    margin-bottom: 74px;
   }
 }
 
 .form__emotions {
+  @include form-padding-20;
+
   margin: 0 auto;
   border: none;
   margin-bottom: -8px;
   margin-top: 24px;
   width: 100%;
 
-  @media (max-width: variables.$tablet-width) {
-    @include form-padding-20;
-  }
-
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
     border-top: 1px solid #dbdbdb;
+    padding-left: 11px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-left: 20px;
   }
 }
 
@@ -404,6 +417,10 @@
   display: block;
 }
 
+.form__radio:focus + .form__control--radio::before {
+  outline: 4px solid #dbdbdb;
+}
+
 .form__control--chekbox::before {
   content: "";
   position: absolute;
@@ -448,6 +465,10 @@
   display: block;
 }
 
+.form__chekbox:focus + .form__control--chekbox::before {
+  outline: 4px solid #dbdbdb;
+}
+
 .form__button {
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
@@ -459,6 +480,10 @@
   text-transform: uppercase;
   border: none;
   padding: 16px 49px;
+
+  &:focus {
+    outline: 4px solid #dbdbdb;
+  }
 
   &:hover {
     background-color: #669ec0;
@@ -491,7 +516,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 227px 0 206px;
+    padding: 0 236px 0 196px;
   }
 }
 
