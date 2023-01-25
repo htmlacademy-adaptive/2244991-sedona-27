@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+@mixin form-padding-20 {
+  padding: 0 20px 0;
+}
+
 .form {
   position: relative;
 
@@ -19,7 +23,7 @@
   line-height: 26px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   text-transform: uppercase;
   text-align: center;
 
@@ -27,34 +31,131 @@
     font-size: 21px;
     margin-bottom: 40px;
     padding: 0 50px;
+
+    &--name {
+      margin-bottom: 12px;
+      padding: 0 0 0 37px;
+    }
+
+    &--phone {
+      padding: 10px 0 0;
+      margin-left: -19px;
+      margin-bottom: 8px;
+    }
+
+    &--feeling {
+      margin-bottom: 12px;
+    }
+
+    &--places {
+      margin-bottom: 14px;
+      padding-left: 16px;
+    }
+
+    &--emotions {
+      margin-left: -11px;
+      margin-bottom: 7px;
+    }
   }
 
   @media (min-width: variables.$desktop-width) {
     margin-bottom: 55px;
+
+    &--name {
+      margin-bottom: 10px;
+      padding-left: 58px;
+    }
+
+    &--phone {
+      margin-left: -33px;
+      margin-bottom: 6px;
+    }
+
+    &--feeling {
+      margin-bottom: 28px;
+      margin-left: -35px;
+    }
+
+    &--places {
+      margin-bottom: 44px;
+      margin-left: -8px;
+    }
+
+    &--emotions {
+      margin-bottom: 6px;
+    }
   }
 }
 
 .form__subtitle {
+  position: relative;
   text-transform: uppercase;
   padding: 16px 16px 0 16px;
+
+  &--phone::before {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    bottom: -58px;
+    right: 0;
+    background-color: #e6e6e6;
+  }
+
+  &--phone::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/phone.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    top: 56px;
+    right: 18px;
+  }
+
+  &--email::before {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    bottom: -58px;
+    right: 0;
+    background-color: #e6e6e6;
+  }
+
+  &--email::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/mail.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    top: 56px;
+    right: 18px;
+  }
 }
 
 .form__box {
   display: flex;
   flex-direction: column;
   border: none;
-  margin-bottom: 49px;
+  margin-bottom: 22px;
 
-  @include form-margin-padding;
+  @media (max-width: variables.$tablet-width) {
+    @include form-padding-20;
+    margin-bottom: 0;
+  }
 }
 
 .form__box--name {
   margin-bottom: 64px;
-  border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
-    margin-right: 43px;
+    margin-right: 33px;
+    margin-bottom: 31px;
     border-bottom: none;
+    padding-left: 60px;
+    padding-top: 10px;
   }
 
   &::before {
@@ -69,16 +170,32 @@
       border-bottom: none;
       display: none;
     }
+
+    @media (min-width: variables.$desktop-width) {
+      left: 51%;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-left: 120px;
+    margin-right: 38px;
+    margin-bottom: 40px;
   }
 }
 
 .form__box--contacts {
-  margin-bottom: 59px;
+  padding-bottom: 32px;
   border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
-    margin-left: 43px;
+    margin-left: 31px;
     border-bottom: none;
+    padding-right: 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-left: 70px;
+    padding-right: 117px;
   }
 }
 
@@ -87,19 +204,25 @@
 
   display: grid;
   border: none;
-  margin-bottom: 59px;
-  border-bottom: 1px solid #dbdbdb;
+  margin: 24px 0 49px;
+
+  @media (max-width: variables.$tablet-width) {
+    @include form-padding-20;
+  }
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     grid-column: 1/-1;
-    margin-bottom: 58px;
+    margin-bottom: 48px;
     border-bottom: none;
     border-top: 1px solid #dbdbdb;
+    padding: 0 95px 0 95px;
   }
 
   @media (min-width: variables.$desktop-width) {
     grid-template-columns: repeat(3, 1fr);
+    padding: 0 104px 0 174px;
+    margin-bottom: 74px;
   }
 }
 
@@ -108,28 +231,39 @@
 
   display: grid;
   border: none;
-  margin-bottom: 59px;
+  padding-bottom: 21px;
   border-bottom: 1px solid #dbdbdb;
+
+  @media (max-width: variables.$tablet-width) {
+    @include form-padding-20;
+  }
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     grid-column: 1/-1;
-    margin-bottom: 58px;
+    margin-bottom: 17px;
     border-bottom: none;
     border-top: 1px solid #dbdbdb;
+    padding: 0 114px 0 143px;
   }
 
   @media (min-width: variables.$desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    padding: 0 118px 0 166px;
+    margin-bottom: 63px;
   }
 }
 
 .form__emotions {
   margin: 0 auto;
-  padding: 0;
   border: none;
-  margin-bottom: 59px;
+  margin-bottom: -8px;
+  margin-top: 24px;
   width: 100%;
+
+  @media (max-width: variables.$tablet-width) {
+    @include form-padding-20;
+  }
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
@@ -144,21 +278,28 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  height: 150px;
+  height: 116px;
   width: 100%;
   margin: 0;
   border: none;
   outline: none;
   background-color: #f2f2f2;
-  margin-top: 20px;
-  margin-bottom: 56px;
+  margin-top: 17px;
+  margin-bottom: 52px;
   padding: 16px;
 
+  &:focus {
+    outline: 4px solid #e5e5e5;
+  }
+
+
   @media (min-width: variables.$tablet-width) {
-    width: 648px;
+    width: 640px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    min-height: 127px;
+    margin-bottom: 47px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -167,6 +308,19 @@
 
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.form__legend {
+  @include form-margin-padding;
+
+  @media (min-width: variables.$tablet-width) {
+    text-align: end;
+    margin-top: 23px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 24px;
   }
 }
 
@@ -203,18 +357,22 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  padding: 18px 62px;
+  padding: 25px 26px 11px 63px;
 }
 
 .form__control--radio::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 10px;
+  bottom: 2px;
   width: 46px;
   height: 46px;
   background-color: #f2f2f2;
   border-radius: 50%;
+}
+
+.form__control--radio:focus::before {
+  outline: 4px solid #e5e5e5;
 }
 
 .form__control--radio:hover::before {
@@ -229,7 +387,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 10px;
+  bottom: 2px;
   width: 46px;
   height: 46px;
   background-image: url("../img/radio.svg");
@@ -250,11 +408,15 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 10px;
+  bottom: 2px;
   width: 46px;
   height: 46px;
   background-color: #f2f2f2;
   border-radius: 4px;
+}
+
+.form__control--chekbox:focus::before {
+  outline: 4px solid #e5e5e5;
 }
 
 .form__control--chekbox:hover::before {
@@ -269,7 +431,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 10px;
+  bottom: 2px;
   width: 46px;
   height: 46px;
   background-image: url("../img/tick.svg");
@@ -296,7 +458,7 @@
   background-color: #81b3d2;
   text-transform: uppercase;
   border: none;
-  padding: 16px 48px;
+  padding: 16px 49px;
 
   &:hover {
     background-color: #669ec0;
@@ -325,6 +487,11 @@
   @media (min-width: variables.$tablet-width) {
     display: flex;
     justify-content: space-between;
+    padding: 0 71px 0 50px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 227px 0 206px;
   }
 }
 

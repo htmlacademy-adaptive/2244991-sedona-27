@@ -10,6 +10,33 @@
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 38px 54px 52px 61px;
+    padding: 38px 76px 52px 61px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 38px 134px 52px 122px;
+  }
+}
+
+.footer--catalog {
+  padding-top: 23px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-right: 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-right: 118px;
+  }
+}
+
+
+.footer--form {
+  @media (min-width: variables.$tablet-width) {
+    padding-right: 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-right: 117px;
   }
 }

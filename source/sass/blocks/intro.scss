@@ -12,8 +12,8 @@
   position: absolute;
   background-image: url("../img/intro-line.svg");
   background-repeat: repeat;
-  width: 599.9px;
-  height: 57px;
+  width: 600.9px;
+  height: 56px;
   bottom: 0;
   left: 50%;
 }
@@ -24,7 +24,7 @@
   background-image: url("../img/intro-line.svg");
   background-repeat: repeat;
   transform: scaleX(-1);
-  width: 599.9px;
+  width: 605.9px;
   height: 57px;
   bottom: -1px;
   right: 50%;
@@ -41,7 +41,7 @@
   @media (min-width: variables.$tablet-width) {
     background-image: url("../img/back-desktop.jpg");
     padding: 77px 0 90px;
-    background-position: 48% 0;
+    background-position: 50% 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/back-desktop@2x.jpg");
@@ -58,11 +58,12 @@
   background: #81b3d2;
   background-image: url("../img/back-desktop.jpg");
   background-repeat: no-repeat;
-  background-position: 50% -218px;
+  background-position: 40% -350px;
   height: 158px;
 
   @media (min-width: variables.$tablet-width) {
-    height: 223px;
+    height: 290px;
+    background-position: 50% -218px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/back-desktop@2x.jpg");
@@ -84,8 +85,7 @@
   object-fit: contain;
 
   @media (min-width: variables.$tablet-width) {
-    width: 62%;
-    left: 10px;
+    width: 60%;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -94,14 +94,17 @@
 }
 
 .intro__text--secong-page {
-  width: 71%;
+  width: 81%;
+  top: 10px;
   object-fit: contain;
 
   @media (min-width: variables.$tablet-width) {
-    width: 59%;
+    width: 62%;
+    top: 18px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 38%;
+    width: 39%;
+    top: 21px;
   }
 }

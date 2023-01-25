@@ -14,3 +14,15 @@
     margin-right: 10px;
   }
 }
+
+.visitsedona--catalog {
+  @media (min-width: variables.$tablet-width) {
+    margin-right: -9px;
+  }
+}
+
+.visitsedona--form {
+  @media (min-width: variables.$tablet-width) {
+    margin-right: -9px;
+  }
+}

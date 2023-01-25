@@ -6,11 +6,11 @@
   margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 49px 0 52px;
+    padding: 49px 50px 52px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 59px 0 44px;
+    padding: 59px 0 43px;
     width: 600px;
   }
 }
@@ -47,7 +47,11 @@
   @media (min-width: variables.$tablet-width) {
     font-size: 21px;
     margin-bottom: 28px;
-    margin-left: 18px;
+    margin-right: 4px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    line-height: 27px;
   }
 }
 
@@ -71,13 +75,16 @@
   }
 }
 
-.main__discription--margin {
+.main__discription--hotel {
   margin-bottom: 48px;
-}
 
-.main__discription--slogan {
   @media (min-width: variables.$tablet-width) {
-    margin-left: 24px;
+    margin-bottom: 53px;
+    line-height: 22px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 58px;
   }
 }
 

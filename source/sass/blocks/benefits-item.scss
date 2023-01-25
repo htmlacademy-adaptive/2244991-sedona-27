@@ -12,6 +12,29 @@
     padding-top: 158px;
     text-align: center;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 167px;
+    width: 260px;
+  }
+}
+
+.benefits-item .advantages__title {
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.benefits-item:nth-child(2) {
+  @media (min-width: variables.$desktop-width) {
+    width: 300px;
+  }
+}
+
+.benefits-item:nth-child(2) .advantages__title {
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .benefits-item--house::before {
@@ -29,12 +52,14 @@
   @media (min-width: variables.$tablet-width) {
     width: 77px;
     height: 75px;
-    top: 20%;
-    left: 30%;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 79px;
+    top: 65px;
   }
 }
 
@@ -52,13 +77,15 @@
   @media (min-width: variables.$tablet-width) {
     width: 80px;
     height: 80px;
-    top: 20%;
-    left: 30%;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 73px;
     height: 76px;
+    top: 68px;
   }
 }
 
@@ -76,13 +103,15 @@
   @media (min-width: variables.$tablet-width) {
     width: 67px;
     height: 80px;
-    top: 20%;
-    left: 30%;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 78px;
     height: 75px;
+    top: 68px;
     background-size: contain;
   }
 }

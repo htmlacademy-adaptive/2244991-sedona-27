@@ -1,9 +1,9 @@
 @use "./variables.scss";
 
 .feedback {
-  padding: 24px 20px;
+  padding: 24px 0;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 80px 60px 100px;
+    padding: 24px 0 65px 0;
   }
 }
