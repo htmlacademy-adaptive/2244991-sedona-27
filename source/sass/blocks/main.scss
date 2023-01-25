@@ -1,31 +1,76 @@
 @use "./variables.scss";
 
+.main {
+  position: relative;
+}
+
 .main__slogan {
-  padding: 39px 20px 33px;
+  padding: 34px 24px 33px;
   text-align: center;
   margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
-    width: 484px;
-    padding: 47px 0 55px;
+    padding: 49px 50px 52px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 59px 0 44px;
+    padding: 59px 0 43px;
+    width: 600px;
+  }
+}
+
+.main__slogan::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/white-copy.svg");
+  background-repeat: repeat;
+  width: 768px;
+  height: 37px;
+  top: 205px;
+  left: 0;
+
+  @media (min-width: 350px) {
+    display: none;
   }
 }
 
 .main__title {
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 38px;
   text-transform: uppercase;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
     font-size: 30px;
+  }
+}
+
+.main__title--larger {
+  @media (max-width: variables.$tablet-width) {
+    font-size: 21px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 33px;
+  }
+}
+
+.main__title--slogan {
+  font-size: 18px;
+  margin-bottom: 36px;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 21px;
+    margin-bottom: 28px;
+    margin-right: 4px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    line-height: 27px;
   }
 }
 
@@ -49,6 +94,21 @@
   }
 }
 
-.main__discription--margin {
+.main__discription--hotel {
   margin-bottom: 48px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 53px;
+    line-height: 22px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 58px;
+  }
+}
+
+.main__discription br {
+  @media (max-width: variables.$tablet-width) {
+    display: none;
+  }
 }

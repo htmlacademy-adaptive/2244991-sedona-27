@@ -10,7 +10,7 @@
 
   @media (min-width: variables.$tablet-width) {
     display: grid;
-    height: 331px;
+    min-height: 330px;
     grid-column: 1/-1;
     grid-template-columns: repeat(3, 1fr);
     padding: 0;

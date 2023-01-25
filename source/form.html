@@ -3,10 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="../fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="body">
@@ -46,13 +51,13 @@
       <section class="review">
         <h2 class="main__title">Оставьте свой отзыв</h2>
         <p class="main__discription">
-          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+          Помогите нашим отелям стать лучше! оставьте отзыв&nbsp;о&nbsp;них, а также о посещенных вами достопримечательностях
         </p>
       </section>
       <section class="feedback">
         <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="form__box form__box--name">
-            <h2 class="form__title">Представьтесь:</h2>
+            <h2 class="form__title form__title--name">Представьтесь:</h2>
             <label class="form__subtitle" for="first-name">
               Имя*:
             </label>
@@ -67,19 +72,19 @@
             <input class="form__input" type="text" id="patronymic" name="patronymic" placeholder="Викторович">
           </fieldset>
           <fieldset class="form__box form__box--contacts">
-            <Legend class="form__title">Контактная информация:</Legend>
+            <h2 class="form__title form__title--phone">Контактная информация:</h2>
             <label class="form__subtitle form__subtitle--phone" for="phone">
               Контактный телефон*:
             </label>
             <input class="form__input" type="text" id="phone" name="phone" placeholder="Введите телефон">
             <label class="form__subtitle form__subtitle--email" for="email">
-              Элекронная почта*:</label>
+              Электронная почта*:</label>
             <input class="form__input" type="email" id="email" name="email" placeholder="Введите email">
           </fieldset>
           <fieldset class="form__feeling">
-            <Legend class="form__title main__title--form">
+            <h2 class="form__title form__title--feeling main__title--form">
               Ваше общее впечатление:
-            </Legend>
+            </h2>
             <input class="form__radio visually-hidden" id="positive" type="radio" name="feeling" value="positive">
             <label class="form__control form__control--radio" for="positive">
               Скорее положительное
@@ -94,7 +99,7 @@
             </label>
           </fieldset>
           <fieldset class="form__places">
-            <Legend class="form__title main__title--form">Посещенные <br> достопримечательности:</Legend>
+            <h2 class="form__title form__title--places main__title--form">Посещенные <br> достопримечательности:</h2>
             <input class="form__chekbox visually-hidden" id="devil_bridge" type="checkbox" name="devil-bridge">
             <label class="form__control form__control--chekbox" for="devil_bridge">
               Мост Дьявола
@@ -113,7 +118,7 @@
             </label>
           </fieldset>
           <fieldset class="form__emotions">
-            <Legend class="form__title">Опишите свои эмоции:</Legend>
+            <h2 class="form__title form__title--emotions">Опишите свои эмоции:</h2>
             <textarea class="form__textarea" id="emotions" name="emotions"
               placeholder="Опишите подробнее все свои восторги"></textarea>
             <div class="form__wrapper">
@@ -126,8 +131,8 @@
         </form>
       </section>
     </main>
-    <footer class="footer">
-      <a class="visitsedona" href="#">#VISITSEDONA</a>
+    <footer class="footer footer--form">
+      <a class="visitsedona visitsedona--form" href="#">#VISITSEDONA</a>
       <div class="social">
         <a class="social__link social__link--vkontakte" href="#">
           <span class="visually-hidden">vkontakte</span>
@@ -155,7 +160,7 @@
   <div class="modal modal--closed">
     <div class="modal__error">
       <div class="modal__text">
-      <h2 class="modal__title">Что-то пошло не так!</h2>
+      <h2 class="modal__title">Что-то пошло не&nbsp;так!</h2>
       <p class="modal__discription">
         Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
       </p>
@@ -169,7 +174,7 @@
     <div class="modal__accepted">
       <div class="modal__text modal__text--sent">
         <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-        <p class="modal__discription">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы
+        <p class="modal__discription modal__discription--sent">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы
           опубликуем его на сайте.</p>
       </div>
       <div class="modal__border">

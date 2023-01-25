@@ -57,13 +57,17 @@
 }
 
 .modal__text {
-  padding: 45px 42px 0 41px;
+  padding: 39px 42px 0 41px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 49px 42px 0 45px;
+  }
 
   &--sent {
-    padding: 39px 39px 30px 37px;
+    padding: 39px 41px 25px 37px;
 
     @media (min-width: variables.$tablet-width) {
-      padding: 51px 99px 30px 97px;
+      padding: 44px 95px 0 95px;
     }
   }
 }
@@ -87,7 +91,19 @@
   margin-bottom: 28px;
 
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 47px;
+  }
+}
+
+.modal__discription--sent {
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 53px;
+  }
+}
+
+.modal__discription br {
+  @media (max-width: variables.$tablet-width) {
+    display: none;
   }
 }
 
@@ -111,18 +127,21 @@
   }
 
   &--ok {
-    padding: 18px 64px 14px 63px;
+    padding: 18px 77px 14px 77px;
 
     @media (min-width: variables.$tablet-width) {
-      padding: 18px 108px 14px 107px;
+      font-size: 21px;
+      padding: 18px 121px 14px 121px;
     }
   }
 
   &--closed {
-    padding: 18px 62px 14px 60px;
+    font-size: 21px;
+
+    padding: 18px 75px 14px 75px;
 
     @media (min-width: variables.$tablet-width) {
-      padding: 18px 140px 14px 139px;
+      padding: 18px 155px 14px 155px;
     }
   }
 }

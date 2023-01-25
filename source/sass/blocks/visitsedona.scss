@@ -9,7 +9,24 @@
   text-transform: uppercase;
   margin-bottom: 33px;
 
+  &:focus {
+    outline: 4px solid #dbdbdb;
+  }
+
   @media (min-width: variables.$tablet-width) {
     margin: 0;
+    margin-right: 10px;
+  }
+}
+
+.visitsedona--catalog {
+  @media (min-width: variables.$tablet-width) {
+    margin-right: -9px;
+  }
+}
+
+.visitsedona--form {
+  @media (min-width: variables.$tablet-width) {
+    margin-right: -9px;
   }
 }

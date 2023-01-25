@@ -6,12 +6,14 @@ nav {
 }
 
 .nav__list {
+  position: relative;
   margin: 0;
   padding: 0;
   min-height: 56px;
   background-color: #81b3d2;
 
   @media (min-width: variables.$tablet-width) {
+    position: static;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -39,18 +41,18 @@ nav {
 
 .nav__item {
   font-size: 18px;
-  line-height: 26px;
+  line-height: 25px;
   font-weight: 700;
   list-style: none;
   text-transform: uppercase;
   border-top: 1px solid #9ac2db;
   border-bottom: 1px solid #678fa8;
 
-
   @media (min-width: variables.$tablet-width) {
     font-size: 14px;
     line-height: 21px;
     border: none;
+    width: 20%;
   }
 }
 
@@ -60,12 +62,41 @@ nav {
   }
 }
 
+.nav__item:last-child {
+  @media (max-width: variables.$tablet-width) {
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 7px;
+    background-image: linear-gradient(
+                        180deg,
+                        fade-out(#000000, 1) 0%,
+                        fade-out(#000000, 0.8) 100%);
+    box-shadow: inset 0 1px 0 fade-out(#ffffff, 0.8);
+    border-bottom: none;
+  }
+}
+
 .nav__link {
   display: flex;
   justify-content: center;
   color: #ffffff;
   text-decoration: none;
   padding: 17px 70px 12px;
+
+  @media (max-width: variables.$tablet-width) {
+    &:hover {
+      background-color: #669ec0;
+    }
+
+    &:active {
+      background-color: #5496bd;
+    }
+
+    &:disabled {
+      background-color: #f5f5f5;
+    }
+  }
 
   @media (min-width: variables.$tablet-width) {
     color: #000000;
@@ -77,10 +108,18 @@ nav {
   }
 }
 
+.nav__link span {
+  @media (max-width: variables.$tablet-width) {
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
 .nav__toggle {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 17px;
   right: 20px;
   background-color: #ffffff;
   width: 23px;
@@ -88,6 +127,7 @@ nav {
   margin-bottom: 17px;
   background-repeat: no-repeat;
   border: none;
+  z-index: 2;
   cursor: pointer;
 
   &:hover::before {

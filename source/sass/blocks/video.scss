@@ -8,11 +8,11 @@
   padding: 17px 20px 0;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 58px 60px 40px;
+    padding: 58px 60px 50px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 62px 0 84px;
+    padding: 62px 0 92px;
   }
 }
 
@@ -22,8 +22,12 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 445px;
-    margin-bottom: 66px;
+    margin-bottom: 87px;
   }
+}
+
+.video__text .main__title {
+  margin-bottom: 26px;
 }
 
 .video__presentation {
@@ -60,4 +64,3 @@
 .video__play {
   position: relative;
 }
-

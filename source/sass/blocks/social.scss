@@ -1,19 +1,21 @@
 @use "./variables.scss";
 
 .social {
-  margin-bottom: 46px;
+  margin-bottom: 40px;
   display: inline-flex;
   flex-wrap: wrap;
 
 
   @media (min-width: variables.$tablet-width) {
     margin: 0;
+    margin-top: -3px;
   }
 }
 
 .social__link {
   position: relative;
-  margin-right: 6px;
+  margin-right: 3px;
+  margin-left: 3px;
   width: 48px;
   height: 48px;
   background-color: #81b3d2;
@@ -27,6 +29,10 @@
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  &:focus {
+    outline: 4px solid #dbdbdb;
   }
 
   &:active::before {

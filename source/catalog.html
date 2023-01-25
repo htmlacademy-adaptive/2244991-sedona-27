@@ -3,20 +3,25 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link href="css/style.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="../fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="../fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="body">
   <svg style="display: none;">
     <symbol viewBox="0 0 23 21" id="icon-like" >
         <path d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727
-         18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273
-          20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76
-           22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95
-            1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="currentColor"/>
+        18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273
+        20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76
+        22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95
+        1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="currentColor"/>
         <use xlink:href="#icon-like"></use>
     </symbol>
   </svg>
@@ -58,20 +63,22 @@
           <div class="fotogallery__text">
             <h2 class="main__title">Фото и видео</h2>
             <p class="main__discription">
-              Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+              Не можете решиться на путешествие из-за курса? <br>Фотографии помогут вам забыть о политике и экономике.
             </p>
           </div>
           <div class="fotogallery__wrapper">
             <figure class="card card--first">
-              <picture>
-                <source media="(min-width: 1200px)" width="1200" height="400"
-                srcset="./img/road-desktop.jpg, ./img/road-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" width="648" height="400"
-                srcset="./img/road-tablet.jpg, ./img/road-tablet@2x.jpg 2x">
-                <img class="card__image card__image--big" width="280" height="280" src="./img/road-mobile.jpg"
-                  srcset="./img/road-mobile@2x.jpg 2x" alt="Шоссе в горизонт.">
-              </picture>
-              <div class="card__text">
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" width="1200" height="400"
+                    srcset="./img/road-desktop.jpg, ./img/road-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="648" height="400"
+                    srcset="./img/road-tablet.jpg, ./img/road-tablet@2x.jpg 2x">
+                  <img class="card__image card__image--big" width="280" height="280" src="./img/road-mobile.jpg"
+                    srcset="./img/road-mobile@2x.jpg 2x" alt="Шоссе в горизонт.">
+                </picture>
+              </a>
+              <div class="card__text card__text--first">
                 <div class="card__name">
                   <h3 class="card__title">Неродные просторы</h3>
                   <p class="card__discription">Автор фото: Борис</p>
@@ -87,14 +94,16 @@
               </div>
             </figure>
             <figure class="card">
-              <picture>
-                <source media="(min-width: 1200px)" width="400" height="267"
-                srcset="./img/flora-desktop.jpg, ./img/flora-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" width="324" height="267"
-                srcset="./img/flora-tablet.jpg, ./img/flora-tablet@2x.jpg 2x">
-                <img class="card__image" width="280" height="280"
-                src="./img/flora-mobile.jpg" srcset="./img/flora-mobile@2x.jpg 2x" alt="Местная растительность.">
-              </picture>
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" width="400" height="267"
+                    srcset="./img/flora-desktop.jpg, ./img/flora-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="267"
+                    srcset="./img/flora-tablet.jpg, ./img/flora-tablet@2x.jpg 2x">
+                  <img class="card__image" width="280" height="280" src="./img/flora-mobile.jpg"
+                    srcset="./img/flora-mobile@2x.jpg 2x" alt="Местная растительность.">
+                </picture>
+              </a>
               <div class="card__text">
                 <div class="card__name">
                   <h3 class="card__title">Местная растительность</h3>
@@ -111,14 +120,16 @@
               </div>
             </figure>
             <figure class="card">
-              <picture>
-                <source media="(min-width: 1200px)" width="400" height="267"
-                srcset="./img/mountains-desktop.jpg, ./img/mountains-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" width="324" height="267"
-                srcset="./img/mountains-tablet.jpg, ./img/mountains-tablet@2x.jpg 2x">
-                <img class="card__image" width="280" height="280"
-                src="./img/mountains-mobile.jpg" srcset="./img/mountains-mobile@2x.jpg 2x" alt="Дорога в горах.">
-              </picture>
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" width="400" height="267"
+                    srcset="./img/mountains-desktop.jpg, ./img/mountains-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="267"
+                    srcset="./img/mountains-tablet.jpg, ./img/mountains-tablet@2x.jpg 2x">
+                  <img class="card__image" width="280" height="280" src="./img/mountains-mobile.jpg"
+                    srcset="./img/mountains-mobile@2x.jpg 2x" alt="Дорога в горах.">
+                </picture>
+              </a>
               <div class="card__text card__text--background">
                 <div class="card__name">
                   <h3 class="card__title">Дорога на север</h3>
@@ -126,7 +137,8 @@
                 </div>
                 <div class="card__like">
                   <a class="card__button-like" href="#">
-                    <svg class="card__like-svg" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="card__like-svg" width="23" height="21" viewBox="0 0 23 21" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="#icon-like"></use>
                     </svg>
                   </a>
@@ -135,14 +147,16 @@
               </div>
             </figure>
             <figure class="card">
-              <picture>
-                <source media="(min-width: 1200px)" width="400" height="267"
-                srcset="./img/bridge-desktop.jpg, ./img/bridge-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" width="324" height="267"
-                srcset="./img/bridge-tablet.jpg, ./img/bridge-tablet@2x.jpg 2x">
-                <img class="card__image" width="280" height="280"
-                src="./img/bridge-mobile.jpg" srcset="./img/bridge-mobile@2x.jpg 2x" alt="Мост Дьявола.">
-              </picture>
+              <a class="card__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" width="400" height="267"
+                    srcset="./img/bridge-desktop.jpg, ./img/bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" width="324" height="267"
+                    srcset="./img/bridge-tablet.jpg, ./img/bridge-tablet@2x.jpg 2x">
+                  <img class="card__image" width="280" height="280" src="./img/bridge-mobile.jpg"
+                    srcset="./img/bridge-mobile@2x.jpg 2x" alt="Мост Дьявола.">
+                </picture>
+              </a>
               <div class="card__text">
                 <div class="card__name">
                   <h3 class="card__title">Мост дьявола</h3>
@@ -183,8 +197,8 @@
         </section>
       </div>
     </main>
-    <footer class="footer">
-      <a class="visitsedona" href="#">#VISITSEDONA</a>
+    <footer class="footer footer--catalog">
+      <a class="visitsedona visitsedona--catalog" href="#">#VISITSEDONA</a>
       <div class="social">
         <a class="social__link social__link--vkontakte" href="#">
           <span class="visually-hidden">vkontakte</span>

@@ -2,7 +2,7 @@
 
 @mixin card-title-margin {
   margin: 0;
-  margin-bottom: 11px;
+  padding: 0;
 }
 
 .card {
@@ -41,17 +41,29 @@
     justify-content: space-between;
     align-items: center;
     background-color: #f2f2f2;
-    padding: 22px 20px 15px;
+    padding: 22px 20px 4px;
   }
 
   @media (min-width: variables.$desktop-width) {
     color: #ffffff;
-    padding: 17px 27px;
+    padding: 4px 20px 6px 26px;
     position: absolute;
     width: 100%;
     box-sizing: border-box;
     background-color: rgba(50, 50, 50, 0.5);
     bottom: 0;
+  }
+}
+
+.card__text--first {
+  @media (min-width: variables.$desktop-width) {
+    padding: 4px 21px;
+  }
+}
+
+.card__name {
+  @media (min-width: variables.$desktop-width) {
+    margin-top: 18px;
   }
 }
 
@@ -62,25 +74,48 @@
 }
 
 .card__title {
+  @include card-title-margin;
+
+  font-size: 14px;
+  line-height: 21px;
   font-weight: 700;
   text-transform: uppercase;
-
-  @include card-title-margin;
 }
 
 .card__discription {
   @include card-title-margin;
+
+  margin-bottom: 12px;
+}
+
+.card__like {
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-bottom: 0;
+  }
 }
 
 .card__button-like {
-  padding-right: 14px;
+  padding-right: 10px;
   color: #000000;
   opacity: 0.3;
   text-decoration: none;
   cursor: pointer;
 
+  @media (min-width: variables.$tablet-width) {
+    padding-right: 3px;
+  }
+
   @media (min-width: variables.$desktop-width) {
     color: #ffffff;
     opacity: 1;
   }
+}
+
+.card__meter {
+  font-weight: 700;
+  font-size: 15px;
 }
