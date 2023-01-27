@@ -25,7 +25,7 @@
   padding: 37px 18px 34px;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 54px 31px 23px;
+    padding: 54px 31px 10px;
   }
 }
 
@@ -67,7 +67,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 63px 50px 41px;
+    padding: 69px 50px 41px;
   }
 }
 
@@ -107,7 +107,7 @@
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 }
 
@@ -118,12 +118,17 @@
 }
 
 .advantages__discription {
+  color: #333333;
   margin: 0;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
     line-height: 21px;
   }
+}
+
+.advantages__discription--white {
+  color: #ffffff;
 }
 
 .advantages__discription br {
@@ -135,4 +140,6 @@
 .advantages__image {
   display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

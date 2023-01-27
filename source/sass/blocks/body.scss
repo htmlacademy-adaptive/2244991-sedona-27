@@ -5,16 +5,14 @@
   font-size: 14px;
   line-height: 1.5em;
   margin: 0;
-  min-width: 320px;
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 
   @media (min-width: variables.$desktop-width) {
-    background-color: #e7e5e5;
+    background-color: #f2f2f2;
   }
 }
 

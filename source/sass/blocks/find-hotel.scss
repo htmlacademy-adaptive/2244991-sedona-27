@@ -33,16 +33,23 @@
   background-color: #81b3d2;
   padding: 16px 49px;
 
+  &:focus {
+    outline: 4px solid #dbdbdb;
+  }
+
   &:hover {
     background-color: #669ec0;
   }
 
   &:active {
+    color: rgba(255, 255, 255, 0.7);
     background-color: #5496bd;
   }
 
   &:disabled {
-    background-color: #f5f5f5;
+    background-color: #e5e5e5;
+    color: #ffffff;
+    pointer-events: none;
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -50,8 +57,3 @@
   }
 }
 
-.find-hotel__button-text {
-  &:active {
-    opacity: 0.3;
-  }
-}

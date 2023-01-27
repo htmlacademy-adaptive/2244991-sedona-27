@@ -53,6 +53,7 @@
       margin-top: -13px;
       width: 400px;
       margin-left: 39px;
+      grid-column: 1/-1;
     }
 
     &--places {
@@ -60,6 +61,7 @@
       margin-top: -25px;
       margin-left: -10px;
       width: 400px;
+      grid-column: 1/-1;
     }
 
     &--emotions {
@@ -67,6 +69,7 @@
       margin-bottom: 28px;
       margin-top: -19px;
       width: 400px;
+      grid-column: 1/-1;
     }
   }
 
@@ -103,6 +106,7 @@
 
 .form__subtitle {
   position: relative;
+  color: #333333;
   text-transform: uppercase;
   padding: 16px 16px 0 16px;
 
@@ -150,6 +154,7 @@
 }
 
 .form__box {
+  position: relative;
   display: flex;
   flex-direction: column;
   border: none;
@@ -176,8 +181,8 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 50%;
-    height: 342px;
+    left: 110%;
+    height: 100%;
     border: 1px solid #dbdbdb;
 
     @media (max-width: variables.$tablet-width) {
@@ -186,7 +191,7 @@
     }
 
     @media (min-width: variables.$desktop-width) {
-      left: 51%;
+      left: 109%;
     }
   }
 
@@ -276,7 +281,6 @@
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
     border-top: 1px solid #dbdbdb;
-    padding-left: 11px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -292,7 +296,7 @@
   font-size: 18px;
   line-height: 26px;
   height: 116px;
-  width: 100%;
+  width: 247px;
   margin: 0;
   border: none;
   outline: none;
@@ -307,7 +311,7 @@
 
 
   @media (min-width: variables.$tablet-width) {
-    width: 640px;
+    width: 612px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -316,7 +320,8 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    width: 768px;
+    width: 737px;
+    margin-left: 197px;
   }
 
   &::placeholder {
@@ -355,14 +360,24 @@
   }
 
   &:focus {
-    background: #ffffff;
+    background: #f2f2f2;
     outline: none;
+  }
+
+  &:active {
+    background-color: #ffffff;
     box-shadow: inset 0 0 0 4px #e5e5e5;
   }
 
   &::placeholder {
+    font-size: 18px;
     color: rgba(0, 0, 0, 0.3);
   }
+}
+
+.form__input--phone,
+.form__input-email {
+  padding-right: 58px;
 }
 
 .form__control {
@@ -490,7 +505,14 @@
   }
 
   &:active {
+    color: rgba(255, 255, 255, 0.7);
     background-color: #5496bd;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+    color: #ffffff;
+    pointer-events: none;
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -499,12 +521,6 @@
 
   @media (min-width: variables.$desktop-width) {
     padding: 16px 101px;
-  }
-}
-
-.form__button-text {
-  &:active {
-    opacity: 0.3;
   }
 }
 
@@ -522,10 +538,12 @@
 
 .form__comment {
   font-size: 12px;
+  line-height: 21px;
   text-transform: uppercase;
   color: rgba(51, 51, 51, 0.6);
 
   @media (min-width: variables.$tablet-width) {
     font-size: 14px;
+    color: #333333;
   }
 }
