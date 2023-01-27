@@ -221,6 +221,7 @@
 .form__feeling {
   @include form-margin-padding;
 
+  position: relative;
   display: grid;
   border: none;
   margin: 24px 0 49px;
@@ -233,7 +234,6 @@
     grid-column: 1/-1;
     margin-bottom: 73px;
     border-bottom: none;
-    border-top: 1px solid #dbdbdb;
     padding: 0 95px 0 95px;
   }
 
@@ -242,6 +242,16 @@
     padding: 0 104px 0 174px;
     margin-bottom: 96px;
   }
+}
+
+.form__feeling::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #dbdbdb;
+  z-index: -1;
 }
 
 .form__places {

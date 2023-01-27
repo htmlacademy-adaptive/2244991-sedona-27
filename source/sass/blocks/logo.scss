@@ -6,6 +6,11 @@
   transform: translateX(-50%);
   display: block;
   text-align: center;
+  z-index: 2;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 0;
+  }
 }
 
 .logo--nav-closed {

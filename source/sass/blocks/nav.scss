@@ -175,5 +175,17 @@ nav {
 
 
 .nav--nojs {
-  position: static;
+  @media (min-width: 320px) and (max-width: variables.$tablet-width) {
+    .nav__toggle {
+      display: none;
+    }
+
+    .nav__list {
+      position: static;
+    }
+
+    .nav__item {
+      display: block;
+    }
+  }
 }
