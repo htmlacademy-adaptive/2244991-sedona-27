@@ -31,3 +31,9 @@
     margin-bottom: 30px;
   }
 }
+
+.review .main__discription {
+  @media (min-width: variables.$tablet-width) {
+    line-height: 24px;
+  }
+}

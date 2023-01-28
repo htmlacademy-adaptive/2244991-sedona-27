@@ -17,14 +17,11 @@
 <body class="body">
   <div class="body__wrapper">
     <header class="header">
-      <a class="logo" href="./index.html">
-        <img class="logo-sedona" width="185" height="96" src="./img/logo-sedona.svg" alt="Sity of sedona.">
-      </a>
-      <nav class="nav nav--closed nav--nojs">
+      <nav class="nav nav--nojs">
         <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="nav__list nav__list--closed">
+        <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="./index.html">Главная</a>
           </li>
@@ -39,17 +36,20 @@
           </li>
         </ul>
       </nav>
+      <a class="logo" href="./index.html">
+        <img class="logo-sedona" width="185" height="96" src="./img/logo-sedona.svg" alt="Sity of sedona.">
+      </a>
       <section class="intro intro--next-page">
-        <h2 class="visually-hidden">Sedona</h2>
+        <h1 class="visually-hidden">Sedona</h1>
         <img class="intro__text intro__text--secong-page" width="901" height="389" src="./img/sedona.svg" alt="Sedona.">
       </section>
     </header>
     <main class="main">
-      <h1 class="visually-hidden">
+      <h2 class="visually-hidden">
         Фотогралерея города Sedona
-      </h1>
+      </h2>
       <section class="review">
-        <h2 class="main__title">Оставьте свой отзыв</h2>
+        <h3 class="main__title">Оставьте свой отзыв</h3>
         <p class="main__discription">
           Помогите нашим отелям стать лучше! оставьте отзыв&nbsp;о&nbsp;них, а также о посещенных вами достопримечательностях
         </p>
@@ -57,7 +57,7 @@
       <section class="feedback">
         <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="form__box form__box--name">
-            <h2 class="form__title form__title--name">Представьтесь:</h2>
+            <h3 class="form__title form__title--name">Представьтесь:</h3>
             <label class="form__subtitle" for="first-name">
               Имя*:
             </label>
@@ -72,19 +72,19 @@
             <input class="form__input" type="text" id="patronymic" name="patronymic" placeholder="Викторович">
           </fieldset>
           <fieldset class="form__box form__box--contacts">
-            <h2 class="form__title form__title--phone">Контактная информация:</h2>
+            <h3 class="form__title form__title--phone">Контактная информация:</h3>
             <label class="form__subtitle form__subtitle--phone" for="phone">
               Контактный телефон*:
             </label>
-            <input class="form__input" type="text" id="phone" name="phone" placeholder="Введите телефон">
+            <input class="form__input form__input--phone" type="tel" id="phone" name="phone" placeholder="Введите телефон">
             <label class="form__subtitle form__subtitle--email" for="email">
               Электронная почта*:</label>
-            <input class="form__input" type="email" id="email" name="email" placeholder="Введите email">
+            <input class="form__input form__input-email" type="email" id="email" name="email" placeholder="Введите email">
           </fieldset>
-          <fieldset class="form__feeling">
-            <h2 class="form__title form__title--feeling main__title--form">
+          <fieldset class="form__feeling form__feeling--line">
+            <h3 class="form__title form__title--feeling">
               Ваше общее впечатление:
-            </h2>
+            </h3>
             <input class="form__radio visually-hidden" id="positive" type="radio" name="feeling" value="positive">
             <label class="form__control form__control--radio" for="positive">
               Скорее положительное
@@ -98,8 +98,8 @@
               Затрудняюсь ответить
             </label>
           </fieldset>
-          <fieldset class="form__places">
-            <h2 class="form__title form__title--places main__title--form">Посещенные <br> достопримечательности:</h2>
+          <fieldset class="form__places form__places--line">
+            <h3 class="form__title form__title--places">Посещенные <br> достопримечательности:</h3>
             <input class="form__chekbox visually-hidden" id="devil_bridge" type="checkbox" name="devil-bridge">
             <label class="form__control form__control--chekbox" for="devil_bridge">
               Мост Дьявола
@@ -117,12 +117,13 @@
               Красные скалы
             </label>
           </fieldset>
-          <fieldset class="form__emotions">
-            <h2 class="form__title form__title--emotions">Опишите свои эмоции:</h2>
+          <fieldset class="form__emotions form__emotions--line">
+            <h3 class="form__title form__title--emotions">Опишите свои эмоции:</h3>
+            <label class="form__label" for="emotions"></label>
             <textarea class="form__textarea" id="emotions" name="emotions"
-              placeholder="Опишите подробнее все свои восторги"></textarea>
+              placeholder="Опишите подробно все свои восторги"></textarea>
             <div class="form__wrapper">
-              <button class="form__button" type="submit"><span class="form__button-text">Отправить отзыв</span></button>
+              <button class="form__button" type="submit">Отправить отзыв</button>
               <p class="form__legend">
                 <small class="form__comment">* — обязательные поля</small>
               </p>
@@ -160,7 +161,7 @@
   <div class="modal modal--closed">
     <div class="modal__error">
       <div class="modal__text">
-      <h2 class="modal__title">Что-то пошло не&nbsp;так!</h2>
+      <h3 class="modal__title">Что-то пошло не&nbsp;так!</h3>
       <p class="modal__discription">
         Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
       </p>
@@ -173,7 +174,7 @@
   <div class="modal modal--closed">
     <div class="modal__accepted">
       <div class="modal__text modal__text--sent">
-        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+        <h3 class="modal__title">Ваш отзыв отправлен!</h3>
         <p class="modal__discription modal__discription--sent">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы
           опубликуем его на сайте.</p>
       </div>

@@ -10,18 +10,19 @@
     width: 190px;
     padding: 0;
     padding-top: 158px;
+    padding-bottom: 20px;
     text-align: center;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-top: 167px;
+    padding-top: 170px;
     width: 260px;
   }
 }
 
 .benefits-item .advantages__title {
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 }
 
@@ -112,6 +113,6 @@
     width: 78px;
     height: 75px;
     top: 68px;
-    background-size: contain;
+    background-image: url("../img/icon-gift-big.svg");
   }
 }

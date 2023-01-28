@@ -10,7 +10,7 @@
   margin: 0 auto;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 49px 50px 52px;
+    padding: 50px 50px 56px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -71,6 +71,7 @@
 
   @media (min-width: variables.$desktop-width) {
     line-height: 27px;
+    margin-right: 0;
   }
 }
 
@@ -86,11 +87,12 @@
 }
 
 .main__discription {
+  color: #333333;
   margin: 0;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
-    line-height: 24px;
+    line-height: 21px;
   }
 }
 
@@ -98,8 +100,7 @@
   margin-bottom: 48px;
 
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 53px;
-    line-height: 22px;
+    margin-bottom: 56px;
   }
 
   @media (min-width: variables.$desktop-width) {

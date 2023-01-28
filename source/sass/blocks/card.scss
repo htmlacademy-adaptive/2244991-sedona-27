@@ -85,7 +85,12 @@
 .card__discription {
   @include card-title-margin;
 
+  color: #333333;
   margin-bottom: 12px;
+
+  @media (min-width: variables.$desktop-width) {
+    color: #ffffff;
+  }
 }
 
 .card__like {
