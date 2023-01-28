@@ -65,10 +65,10 @@
     }
 
     &--emotions {
-      margin-left: 123px;
+      margin-left: 174px;
       margin-bottom: 28px;
       margin-top: -19px;
-      width: 400px;
+      width: 300px;
       grid-column: 1/-1;
     }
   }
@@ -89,17 +89,23 @@
     &--feeling {
       margin-bottom: 31px;
       margin-left: 230px;
+      z-index: 3;
+      position: inherit;
     }
 
     &--places {
       margin-bottom: 44px;
       margin-left: 233px;
+      z-index: 3;
+      position: inherit;
     }
 
     &--emotions {
       margin-bottom: 28px;
       margin-top: -13px;
-      margin-left: 332px;
+      margin-left: 385px;
+      z-index: 3;
+      position: inherit;
     }
   }
 }
@@ -271,6 +277,7 @@
     border-top: 1px solid #dbdbdb;
     left: 120px;
     width: 80%;
+    z-index: 1;
   }
 }
 
@@ -320,6 +327,33 @@
     border-top: 1px solid #dbdbdb;
     left: 120px;
     width: 80%;
+    z-index: 1;
+  }
+}
+
+.form__places--line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+  z-index: -1;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 220px;
+    left: 60px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: none;
+    width: 85%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    top: 234px;
+    border-top: 1px solid #dbdbdb;
+    left: 120px;
+    width: 80%;
+    z-index: 1;
   }
 }
 
@@ -343,30 +377,6 @@
   }
 }
 
-.form__emotion--line::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 1px solid #dbdbdb;
-  z-index: -1;
-
-  @media (min-width: variables.$tablet-width) {
-    top: 0;
-    left: 60px;
-    border-top: 1px solid #dbdbdb;
-    border-bottom: none;
-    width: 85%;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    top: 0;
-    border-top: 1px solid #dbdbdb;
-    left: 120px;
-    width: 80%;
-  }
-}
 
 .form__textarea {
   font-family: "PT Sans", "Arial", sans-serif;
