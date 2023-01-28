@@ -90,6 +90,7 @@ nav {
     }
 
     &:active {
+      color: rgba(255, 255, 255, 0.7);
       background-color: #5496bd;
     }
 
@@ -104,14 +105,6 @@ nav {
 
     &:hover {
       color: #766357;
-    }
-  }
-}
-
-.nav__link span {
-  @media (max-width: variables.$tablet-width) {
-    &:active {
-      opacity: 0.3;
     }
   }
 }
@@ -175,7 +168,7 @@ nav {
 
 
 .nav--nojs {
-  @media (min-width: 320px) and (max-width: variables.$tablet-width) {
+  @media (min-width: 280px) and (max-width: variables.$tablet-width) {
     .nav__toggle {
       display: none;
     }

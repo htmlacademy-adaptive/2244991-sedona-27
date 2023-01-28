@@ -19,6 +19,10 @@
   @media (min-width: variables.$tablet-width) {
     padding: 55px 33px 28px 33px;
   }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 55px 61px 28px;
+  }
 }
 
 .advantages__wrapper--second {
@@ -60,7 +64,7 @@
 .advantages__item--not-active {
   color: #000000;
   background-color: #eeeeee;
-  padding: 25px 33px 23px;
+  padding: 26px 33px 23px;
 
   @media (min-width: variables.$tablet-width) {
     padding: 53px 33px;
@@ -127,14 +131,14 @@
   }
 }
 
-.advantages__discription--white {
-  color: #ffffff;
-}
-
 .advantages__discription br {
-  @media (max-width: variables.$tablet-width) {
+  @media (min-width: variables.$tablet-width) {
     display: none;
   }
+}
+
+.advantages__discription--white {
+  color: #ffffff;
 }
 
 .advantages__image {

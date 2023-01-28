@@ -51,16 +51,16 @@
     &--feeling {
       margin-bottom: 12px;
       margin-top: -13px;
-      width: 400px;
-      margin-left: 39px;
+      width: 291px;
+      margin-left: 93px;
       grid-column: 1/-1;
     }
 
     &--places {
       margin-bottom: 14px;
       margin-top: -25px;
-      margin-left: -10px;
-      width: 400px;
+      margin-left: 39px;
+      width: 300px;
       grid-column: 1/-1;
     }
 
@@ -88,12 +88,12 @@
 
     &--feeling {
       margin-bottom: 31px;
-      margin-left: 178px;
+      margin-left: 230px;
     }
 
     &--places {
       margin-bottom: 44px;
-      margin-left: 186px;
+      margin-left: 233px;
     }
 
     &--emotions {
@@ -109,6 +109,7 @@
   color: #333333;
   text-transform: uppercase;
   padding: 16px 16px 0 16px;
+  margin-top: -3px;
 
   &--phone::before {
     content: "";
@@ -167,11 +168,13 @@
 }
 
 .form__box--name {
-  margin-bottom: 64px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 34px;
 
   @media (min-width: variables.$tablet-width) {
     margin-right: 33px;
-    margin-bottom: 43px;
+    margin-bottom: 12px;
     border-bottom: none;
     padding-left: 60px;
     padding-top: 10px;
@@ -182,7 +185,7 @@
     position: absolute;
     top: 0;
     left: 110%;
-    height: 100%;
+    height: 93%;
     border: 1px solid #dbdbdb;
 
     @media (max-width: variables.$tablet-width) {
@@ -198,12 +201,12 @@
   @media (min-width: variables.$desktop-width) {
     padding-left: 120px;
     margin-right: 38px;
-    margin-bottom: 51px;
+    margin-bottom: 20px;
   }
 }
 
 .form__box--contacts {
-  padding-bottom: 32px;
+  padding-bottom: 29px;
   border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
@@ -244,44 +247,86 @@
   }
 }
 
-.form__feeling::after {
+.form__feeling--line::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: -24px;
   left: 0;
   width: 100%;
-  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
   z-index: -1;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 0;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: none;
+    left: 60px;
+    width: 85%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-top: 1px solid #dbdbdb;
+    left: 120px;
+    width: 80%;
+  }
 }
 
 .form__places {
   @include form-margin-padding;
   @include form-padding-20;
 
+  position: relative;
   display: grid;
   border: none;
   padding-bottom: 21px;
-  border-bottom: 1px solid #dbdbdb;
 
   @media (min-width: variables.$tablet-width) {
     grid-template-columns: repeat(2, 1fr);
     grid-column: 1/-1;
-    margin-bottom: 34px;
+    margin-bottom: 38px;
     border-bottom: none;
-    border-top: 1px solid #dbdbdb;
     padding: 0 114px 0 143px;
   }
 
   @media (min-width: variables.$desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     padding: 0 118px 0 166px;
-    margin-bottom: 74px;
+    margin-bottom: 77px;
+  }
+}
+
+.form__places--line::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+  z-index: -1;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 0;
+    left: 60px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: none;
+    width: 85%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    top: 0;
+    border-top: 1px solid #dbdbdb;
+    left: 120px;
+    width: 80%;
   }
 }
 
 .form__emotions {
   @include form-padding-20;
 
+  position: relative;
   margin: 0 auto;
   border: none;
   margin-bottom: -8px;
@@ -290,11 +335,36 @@
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
-    border-top: 1px solid #dbdbdb;
+    padding: 0 10px;
   }
 
   @media (min-width: variables.$desktop-width) {
     padding-left: 20px;
+  }
+}
+
+.form__emotion--line::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+  z-index: -1;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 0;
+    left: 60px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: none;
+    width: 85%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    top: 0;
+    border-top: 1px solid #dbdbdb;
+    left: 120px;
+    width: 80%;
   }
 }
 
@@ -323,7 +393,7 @@
   @media (min-width: variables.$tablet-width) {
     width: 612px;
     display: block;
-    margin-left: auto;
+    margin-left: 52px;
     margin-right: auto;
     min-height: 127px;
     margin-bottom: 47px;
@@ -337,14 +407,21 @@
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
   }
+
+  &::-moz-placeholder {
+    opacity: 1;
+  }
 }
+
 
 .form__legend {
   @include form-margin-padding;
+  text-align: end;
+  margin-right: 40px;
 
   @media (min-width: variables.$tablet-width) {
-    text-align: end;
     margin-top: 23px;
+    margin-right: 0;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -363,6 +440,7 @@
   outline: none;
   background-color: #f2f2f2;
   padding: 16px;
+  margin-bottom: 5px;
 
   &:hover {
     color: #000000;
@@ -383,11 +461,15 @@
     font-size: 18px;
     color: rgba(0, 0, 0, 0.3);
   }
+
+  &::-moz-placeholder {
+    opacity: 1;
+  }
 }
 
 .form__input--phone,
 .form__input-email {
-  padding-right: 58px;
+  padding-right: 40px;
 }
 
 .form__control {
