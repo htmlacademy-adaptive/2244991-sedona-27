@@ -139,7 +139,7 @@ nav {
     opacity: 0.3;
   }
 
-  @media (min-width: variables.$tablet-width) {
+  @media (min-width: 200px) {
     display: none;
   }
 }
@@ -168,7 +168,7 @@ nav {
 
 
 .nav--nojs {
-  @media (min-width: 280px) and (max-width: variables.$tablet-width) {
+  @media (min-width: 200px) and (max-width: variables.$tablet-width) {
     .nav__toggle {
       display: none;
     }

@@ -27,10 +27,6 @@
   text-transform: uppercase;
   text-align: center;
 
-  &--emotions {
-    margin-left: -39px;
-  }
-
   @media (min-width: variables.$tablet-width) {
     font-size: 21px;
     margin-bottom: 40px;
@@ -103,7 +99,7 @@
     &--emotions {
       margin-bottom: 28px;
       margin-top: -13px;
-      margin-left: 385px;
+      margin-left: 381px;
       z-index: 3;
       position: inherit;
     }
@@ -366,6 +362,7 @@
   margin-bottom: -8px;
   margin-top: 24px;
   width: 100%;
+  box-sizing: border-box;
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1/-1;
@@ -424,11 +421,9 @@
 .form__legend {
   @include form-margin-padding;
   text-align: end;
-  margin-right: 40px;
 
   @media (min-width: variables.$tablet-width) {
     margin-top: 23px;
-    margin-right: 0;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -473,7 +468,16 @@
 
 .form__input--phone,
 .form__input-email {
-  padding-right: 40px;
+  padding-right: 58px;
+  width: 73%;
+
+  @media (min-width: 530px) and (max-width: 766px) {
+    width: 85%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 81%;
+  }
 }
 
 .form__control {
@@ -590,7 +594,7 @@
   background-color: #81b3d2;
   text-transform: uppercase;
   border: none;
-  padding: 16px 49px;
+  padding: 16px 47px;
 
   &:focus {
     outline: 4px solid #dbdbdb;
@@ -624,11 +628,11 @@
   @media (min-width: variables.$tablet-width) {
     display: flex;
     justify-content: space-between;
-    padding: 0 71px 0 50px;
+    padding: 0 50px 0 50px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 236px 0 196px;
+    padding: 0 205px 0 196px;
   }
 }
 
