@@ -473,7 +473,16 @@
 
 .form__input--phone,
 .form__input-email {
-  padding-right: 40px;
+  padding-right: 58px;
+  width: 73%;
+
+  @media (min-width: 530px) and (max-width: 766px) {
+    width: 85%;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 81%;
+  }
 }
 
 .form__control {
